@@ -20,6 +20,6 @@ The commandline will fill with many lines of logs.
 docker run -t -v $(pwd)/data:/data inowas/modflow python lake_example.py
 ```
 
-After executing the example a bunch of new files will be generated in the data/output - folder
+After executing the example a bunch of new files will be generated in the data/output - folder.  
 You can delete this folder and execute the script again and again.
 
