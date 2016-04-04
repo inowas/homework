@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import flopy.modflow as mf
 import flopy.utils as fu
 
-workspace = os.path.join('data')
+workspace = os.path.join('.')
 #make sure workspace directory exists
 if not os.path.exists(workspace):
     os.makedirs(workspace)
