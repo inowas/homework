@@ -1,4 +1,4 @@
-# homework
+# Homework
 the modflow homework repository
 
 ## Installation of modflow image
