@@ -4,16 +4,23 @@ import matplotlib.pyplot as plt
 import flopy.modflow as mf
 import flopy.utils as fu
 import pprint
+import shutil
 
 workspace = os.path.join('ascii')
 output = os.path.join('output')
 
-#make sure the directories existing
+# delete directories if existing
+if os.path.exists(workspace):
+    shutil.rmtree(workspace)
+
+if os.path.exists(output):
+    shutil.rmtree(output)
+
 if not os.path.exists(workspace):
     os.makedirs(workspace)
 
 if not os.path.exists(output):
-    os.makedirs(output)    
+    os.makedirs(output)
 
 name = 'lake_example'
 
