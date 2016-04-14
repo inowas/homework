@@ -227,3 +227,11 @@ c = plt.contour(x, z, h[:,50,:], np.arange(90,100.1,.2))
 plt.axis('scaled');
 plt.savefig(os.path.join(output, name+'_3.png'))
 plt.close()
+
+x = y = np.linspace(0, L, N)
+for n in range(0, Nlay):
+    c = plt.contour(x, y, h[n], np.arange(90,100.1,0.2))
+    plt.clabel(c, fmt='%2.1f')
+    plt.axis('scaled');
+    plt.savefig(os.path.join(output, name+'_L'+str(n+1)+'.png'))
+    plt.close()
