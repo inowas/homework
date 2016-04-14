@@ -3,12 +3,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 import flopy.modflow as mf
 import flopy.utils as fu
+import pprint
 
-workspace = os.path.join('output')
+workspace = os.path.join('ascii')
+output = os.path.join('output')
 
-#make sure workspace directory exists
+#make sure the directories existing
 if not os.path.exists(workspace):
     os.makedirs(workspace)
+
+if not os.path.exists(output):
+    os.makedirs(output)    
 
 name = 'lake_example'
 h1 = 100
@@ -23,9 +28,9 @@ ml = mf.Modflow(modelname=name, exe_name='mf2005', version='mf2005', model_ws=wo
 
 bot = np.linspace(-H/Nlay,-H,Nlay) 
 delrow = delcol = L/(N-1) 
-dis = mf.ModflowDis(ml,nlay=Nlay,nrow=N,ncol=N,delr=delrow,delc=delcol,top=0.0,botm=bot,laycbd=0) 
-
+dis = mf.ModflowDis(ml, nlay=Nlay, nrow=N, ncol=N, delr=delrow, delc=delcol, top=0.0, botm=bot, laycbd=0)
 Nhalf = (N-1)/2 
+
 ibound = np.ones((Nlay,N,N)) 
 ibound[:,0,:] = -1; ibound[:,-1,:] = -1; ibound[:,:,0] = -1; ibound[:,:,-1] = -1 
 ibound[0,Nhalf,Nhalf] = -1 
@@ -46,20 +51,20 @@ x = y = np.linspace(0, L, N)
 c = plt.contour(x, y, h[0], np.arange(90,100.1,0.2))
 plt.clabel(c, fmt='%2.1f')
 plt.axis('scaled');
-plt.savefig(os.path.join(workspace, name+'_1.png'))
+plt.savefig(os.path.join(output, name+'_1.png'))
 plt.close()
 
 x = y = np.linspace(0, L, N)
 c = plt.contour(x, y, h[-1], np.arange(90,100.1,0.2))
 plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
-plt.savefig(os.path.join(workspace, name+'_2.png'))
+plt.savefig(os.path.join(output, name+'_2.png'))
 plt.close()
 
 z = np.linspace(-H/Nlay/2, -H+H/Nlay/2, Nlay)
 c = plt.contour(x, z, h[:,50,:], np.arange(90,100.1,.2))
 plt.axis('scaled');
-plt.savefig(os.path.join(workspace, name+'_3.png'))
+plt.savefig(os.path.join(output, name+'_3.png'))
 plt.close()
 
 
