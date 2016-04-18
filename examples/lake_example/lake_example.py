@@ -22,7 +22,7 @@ if not os.path.exists(workspace):
 if not os.path.exists(output):
     os.makedirs(output)
 
-name = 'lake_example'
+name = 'lake_examples'
 
 # --- Setting up the parameters
 # Groundwater heads
