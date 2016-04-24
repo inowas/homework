@@ -216,84 +216,71 @@ hds = fu.HeadFile(os.path.join(workspace, name+'.hds'))
 h = hds.get_data(kstpkper=(0, 0))
 
 x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[0], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%2.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_1.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
 c = plt.contour(x, y, h[-1], np.arange(90,100.1,0.2))
 plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_2.png'))
+plt.savefig(os.path.join(output, name+'_1.png'))
 plt.close()
 
 x = y = np.linspace(0, L, N)
 c = plt.contour(x, y, h[-2], np.arange(90,100.1,0.2))
 plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_3.png'))
+plt.savefig(os.path.join(output, name+'_2.png'))
 plt.close()
 
 x = y = np.linspace(0, L, N)
 c = plt.contour(x, y, h[-3], np.arange(90,100.1,0.2))
 plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_4.png'))
+plt.savefig(os.path.join(output, name+'_3.png'))
 plt.close()
 
 x = y = np.linspace(0, L, N)
 c = plt.contour(x, y, h[-4], np.arange(90,100.1,0.2))
 plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_5.png'))
+plt.savefig(os.path.join(output, name+'_4.png'))
 plt.close()
 
 x = y = np.linspace(0, L, N)
 c = plt.contour(x, y, h[-5], np.arange(90,100.1,0.2))
 plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_7.png'))
+plt.savefig(os.path.join(output, name+'_5.png'))
 plt.close()
 
 x = y = np.linspace(0, L, N)
 c = plt.contour(x, y, h[-6], np.arange(90,100.1,0.2))
 plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_8.png'))
+plt.savefig(os.path.join(output, name+'_6.png'))
 plt.close()
 
 x = y = np.linspace(0, L, N)
 c = plt.contour(x, y, h[-7], np.arange(90,100.1,0.2))
 plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_9.png'))
+plt.savefig(os.path.join(output, name+'_7.png'))
 plt.close()
 
 x = y = np.linspace(0, L, N)
 c = plt.contour(x, y, h[-8], np.arange(90,100.1,0.2))
 plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_10.png'))
+plt.savefig(os.path.join(output, name+'_8.png'))
 plt.close()
 
 x = y = np.linspace(0, L, N)
 c = plt.contour(x, y, h[-9], np.arange(90,100.1,0.2))
 plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_11.png'))
+plt.savefig(os.path.join(output, name+'_9.png'))
 plt.close()
 
 x = y = np.linspace(0, L, N)
 c = plt.contour(x, y, h[-10], np.arange(90,100.1,0.2))
 plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_12.png'))
-plt.close()
-
-z = np.linspace(-H/Nlay/2, -H+H/Nlay/2, Nlay)
-c = plt.contour(x, z, h[:,50,:], np.arange(90,100.1,.2))
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_13.png'))
+plt.savefig(os.path.join(output, name+'_10.png'))
 plt.close()
