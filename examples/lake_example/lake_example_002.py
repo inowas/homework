@@ -22,7 +22,7 @@ if not os.path.exists(workspace):
 if not os.path.exists(output):
     os.makedirs(output)
 
-name = 'lake_example'
+name = 'lake_example_002'
 
 # --- Setting up the parameters
 # Groundwater heads
@@ -215,72 +215,14 @@ ml.run_model()
 hds = fu.HeadFile(os.path.join(workspace, name+'.hds'))
 h = hds.get_data(kstpkper=(0, 0))
 
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[-1], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_L01.png'))
-plt.close()
+for layer_number in range (0,Nlay-1):
+	x = y = np.linspace(0, L, N)
+	c = plt.contour(x, y, h[layer_number], np.arange(90,100.1,0.2))
+	plt.clabel(c, fmt='%1.1f')
+	plt.axis('scaled');
+	plt.savefig(os.path.join(output, name+'_L'+str(layer_number+1)+'.png'))
+	plt.close()
 
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[-2], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_L02.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[-3], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_L03.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[-4], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_L04.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[-5], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_L05.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[-6], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_L06.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[-7], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_L07.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[-8], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_L08.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[-9], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_L09.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[-10], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_L10.png'))
-plt.close()
+# forloop ends when the next code line starts.Everything has to be tab.
+# Variable for forloop cant be the same as another one - "layer_number"
+# to run the forloop use "str" before name.

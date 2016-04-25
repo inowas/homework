@@ -223,7 +223,7 @@ plt.savefig(os.path.join(output, name+'_1.png'))
 plt.close()
 
 x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[-9], np.arange(90,100.1,0.2))
+c = plt.contour(x, y, h[-1], np.arange(90,100.1,0.2))
 plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
 plt.savefig(os.path.join(output, name+'_2.png'))
