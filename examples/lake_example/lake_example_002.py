@@ -215,72 +215,10 @@ ml.run_model()
 hds = fu.HeadFile(os.path.join(workspace, name+'.hds'))
 h = hds.get_data(kstpkper=(0, 0))
 
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[0], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_1.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[1], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_2.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[2], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_3.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[3], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_4.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[4], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_5.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[5], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_6.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[6], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_7.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[7], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_8.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[8], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_9.png'))
-plt.close()
-
-x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[9], np.arange(90,100.1,0.2))
-plt.clabel(c, fmt='%1.1f')
-plt.axis('scaled');
-plt.savefig(os.path.join(output, name+'_10.png'))
-plt.close()
+for layer_number in range(0,Nlay-1):
+	x = y = np.linspace(0, L, N)
+	c = plt.contour(x, y, h[layer_number], np.arange(90,100.1,0.2))
+	plt.clabel(c, fmt='%1.1f')
+	plt.axis('scaled');
+	plt.savefig(os.path.join(output, name+'_L'+str(layer_number+1)+'.png'))
+	plt.close()
