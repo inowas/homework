@@ -7,7 +7,7 @@ import pprint
 import shutil
 
 workspace = os.path.join('ascii')
-output = os.path.join('output_lup')
+output = os.path.join('output_river')
 
 # delete directories if existing
 if os.path.exists(workspace):
@@ -22,19 +22,19 @@ if not os.path.exists(workspace):
 if not os.path.exists(output):
     os.makedirs(output)
 
-name = 'lake_example_002_rlf'
+name = 'lake_example_river'
 
 # --- Setting up the parameters
 # Groundwater heads
 h1 = 100 #in the boundaries
-h2 = 90  # water-level-lake
+h2 = 80  # water-level-lake
 
 # Number of layers
-Nlay = 10
+Nlay = 3
 
 # Number of columns and rows
 # we are assuming that NCol = NRow
-N = 101 
+N = 11 
 
 # The length and with of the model
 L = 400.0 
@@ -59,7 +59,7 @@ delrow = delcol = L/(N-1)
 # 4
 
 # instantiante the discretization object
-dis = mf.ModflowDis(ml, nlay=Nlay, nrow=N, ncol=N, delr=delrow, delc=delcol, top=0.0, botm=bot, laycbd=0)
+dis = mf.ModflowDis(ml, nlay=Nlay, nrow=N, ncol=N, delr=delrow, delc=delcol, top=0.0, nper=3, botm=bot, laycbd=0)
 
 # helping-variable
 Nhalf = (N-1)/2 
@@ -124,67 +124,13 @@ ibound = np.ones((Nlay,N,N))
 #         [ 1.,  1.,  1., ...,  1.,  1.,  1.]]])
 
 
-# Set all elements in the first row to -1
-ibound[:,0,:] = -1 
 
-# Set all elements in the last row to -1
-ibound[:,-1,:] = -1
 
 # Set every first element of every column to -1
 ibound[:,:,0] = -1
 
-# Set every last element of every column to -1
-ibound[:,:,-1] = -1
 
-#result is:
-#array([[[-1., -1., -1., ..., -1., -1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        ..., 
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1., -1., -1., ..., -1., -1., -1.]],
-#
-#       [[-1., -1., -1., ..., -1., -1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        ..., 
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1., -1., -1., ..., -1., -1., -1.]],
-#
-#       [[-1., -1., -1., ..., -1., -1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        ..., 
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1., -1., -1., ..., -1., -1., -1.]],
-#
-#       ..., 
-#       [[-1., -1., -1., ..., -1., -1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        ..., 
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1., -1., -1., ..., -1., -1., -1.]],
-#
-#       [[-1., -1., -1., ..., -1., -1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        ..., 
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1., -1., -1., ..., -1., -1., -1.]],
-#
-#       [[-1., -1., -1., ..., -1., -1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        ..., 
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1.,  1.,  1., ...,  1.,  1., -1.],
-#        [-1., -1., -1., ..., -1., -1., -1.]]])
+
 
 # set center cell in upper layer to constant head (-1)
 ibound[0,Nhalf,Nhalf] = -1 
@@ -200,6 +146,51 @@ start[Nhalf,Nhalf] = h2
 # instantiate the modflow-basic package with iBound and startvalues
 bas = mf.ModflowBas(ml,ibound=ibound,strt=start)
 
+stress_period_data = \
+	{0: [
+	    [0, 0, 10, 80, 5000, 90],
+	    [0, 1, 10, 80, 5000, 90],
+	    [0, 2, 10, 80, 5000, 90],
+	    [0, 3, 10, 80, 5000, 90],
+	    [0, 4, 10, 80, 5000, 90],
+	    [0, 5, 10, 80, 5000, 90],
+	    [0, 6, 10, 80, 5000, 90],
+	    [0, 7, 10, 80, 5000, 90],
+	    [0, 8, 10, 80, 5000, 90],
+	    [0, 9, 10, 80, 5000, 90],
+	    [0, 10, 10, 80, 5000,90]
+	    ],
+	1:  [
+	 	[0, 0, 10, 90, 5000, 90],
+	    [0, 1, 10, 90, 5000, 90],
+	    [0, 2, 10, 90, 5000, 90],
+	    [0, 3, 10, 90, 5000, 90],
+	    [0, 4, 10, 90, 5000, 90],
+	    [0, 5, 10, 90, 5000, 90],
+	    [0, 6, 10, 90, 5000, 90],
+	    [0, 7, 10, 90, 5000, 90],
+	    [0, 8, 10, 90, 5000, 90],
+	    [0, 9, 10, 90, 5000, 90],
+	    [0, 10, 10,90, 5000, 90]
+	    ],
+
+	2:  [
+	 	[0, 0, 10, 100, 5000, 90],
+	    [0, 1, 10, 100, 5000, 90],
+	    [0, 2, 10, 100, 5000, 90],
+	    [0, 3, 10, 100, 5000, 90],
+	    [0, 4, 10, 100, 5000, 90],
+	    [0, 5, 10, 100, 5000, 90],
+	    [0, 6, 10, 100, 5000, 90],
+	    [0, 7, 10, 100, 5000, 90],
+	    [0, 8, 10, 100, 5000, 90],
+	    [0, 9, 10, 100, 5000, 90],
+	    [0, 10, 10,100, 5000, 90]
+	    ]
+	}  
+                                      #applied to all stress periods
+riv = mf.ModflowRiv(ml, stress_period_data=stress_period_data)
+
 # set the aquifer properties with the lpf-package
 lpf = mf.ModflowLpf(ml, hk=k)
  
@@ -213,32 +204,31 @@ ml.write_input()
 ml.run_model()
 
 hds = fu.HeadFile(os.path.join(workspace, name+'.hds'))
-h = hds.get_data(kstpkper=(0, 0))
+h = hds.get_data(kstpkper=(0, 2))
 
 x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[0], np.arange(90,100.1,0.2))
+c = plt.contour(x, y, h[0], np.arange(80,100.1,0.5))
 plt.clabel(c, fmt='%2.1f')
 plt.axis('scaled');
 plt.savefig(os.path.join(output, name+'_1.png'))
 plt.close()
 
 x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[-1], np.arange(90,100.1,0.2))
+c = plt.contour(x, y, h[-1], np.arange(80,100.1,0.5))
 plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
 plt.savefig(os.path.join(output, name+'_2.png'))
 plt.close()
 
-for layer_number in range(0,Nlay-1):
-	x = y = np.linspace(0, L, N)
-	c = plt.contour(x, y, h[layer_number], np.arange(90,100.1,0.2))
-	plt.clabel(c, fmt='%1.1f')
-	plt.axis('scaled');
-	plt.savefig(os.path.join(output, name+'_L'+str(layer_number +1)+'.png'))
-	plt.close()
-
-z = np.linspace(-H/Nlay/2, -H+H/Nlay/2, Nlay)
-c = plt.contour(x, z, h[:,50,:], np.arange(90,100.1,.2))
+x = y = np.linspace(0, L, N)
+c = plt.contour(x, y, h[-2], np.arange(80,100.1,0.5))
+plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
 plt.savefig(os.path.join(output, name+'_3.png'))
+plt.close()
+
+z = np.linspace(-H/Nlay/2, -H+H/Nlay/2, Nlay)
+c = plt.contour(x, z, h[:,5,:], np.arange(80,100.1,.5))
+plt.axis('scaled');
+plt.savefig(os.path.join(output, name+'_4.png'))
 plt.close()

@@ -1,7 +1,7 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-import flopy.modflow as mf
+import flopy.modflow as Dear
 import flopy.utils as fu
 import pprint
 import shutil
@@ -22,7 +22,7 @@ if not os.path.exists(workspace):
 if not os.path.exists(output):
     os.makedirs(output)
 
-name = 'lake_examples'
+name = 'lake_example_002_rlf'
 
 # --- Setting up the parameters
 # Groundwater heads
@@ -228,6 +228,14 @@ plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
 plt.savefig(os.path.join(output, name+'_2.png'))
 plt.close()
+
+for layer_number in range(0,9):
+	x = y = np.linspace(0, L, N)
+	c = plt.contour(x, y, h[layer_number], np.arange(90,100.1,0.2))
+	plt.clabel(c, fmt='%1.1f')
+	plt.axis('scaled');
+	plt.savefig(os.path.join(output, name+'_L+layer_number +1+.png'))
+	plt.close()
 
 z = np.linspace(-H/Nlay/2, -H+H/Nlay/2, Nlay)
 c = plt.contour(x, z, h[:,50,:], np.arange(90,100.1,.2))
