@@ -175,3 +175,12 @@ c = plt.contour(x, z, h[:,50,:], np.arange(80,100.1,.2))
 plt.axis('scaled');
 plt.savefig(os.path.join(output, name+'_3.png'))
 plt.close()
+
+for layer_number in range(0,9):
+    x = y = np.linspace(0, L, N)
+    c = plt.contour(x, y, h[layer_number], np.arange(80,100.1,0.2))
+    plt.clabel(c, fmt='%2.1f')
+    plt.axis('scaled');
+    plt.savefig(os.path.join(output, name+'_L'+str(layer_number+1)+'.png'))
+    plt.close()
+
