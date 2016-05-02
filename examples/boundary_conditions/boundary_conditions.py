@@ -26,20 +26,12 @@ if not os.path.exists(output):
 
 name = 'boundary_conditions'
 
-stress_period_data = [
-                      [2, 3, 4, 10.7, 5000., -5.7],   #layer, row, column, stage conductance, river bottom
-                      [2, 3, 5, 10.7, 5000., -5.7],   #layer, row, column, stage conductance, river bottom
-                      [2, 3, 6, 10.7, 5000., -5.7],   #layer, row, column, stage conductance, river bottom
+stress_period_data = [[[0, 0, 2, 10, 5000., 0],   #layer, row, column, stage, conductance, river bottom
+                       [0, 1, 2, 10, 5000., 0],   #layer, row, column, stage, conductance, river bottom
+                       [0, 2, 2, 10, 5000., 0]],   #layer, row, column, stage, conductance, river bottom
                      ]
 m = flopy.modflow.Modflow(modelname=name, model_ws=workspace)
 dis = flopy.modflow.ModflowDis(m, nper=3)
 riv = flopy.modflow.ModflowRiv(m, stress_period_data=stress_period_data)
-
-riv_dtype = flopy.modflow.ModflowRiv.get_default_dtype()
-stress_period_data = np.zeros((3), dtype=riv_dtype)
-stress_period_data[0] = (2, 3, 4, 10.7, 5000., -5.7)
-stress_period_data[1] = (2, 3, 5, 10.7, 5000., -5.7)
-stress_period_data[2] = (2, 3, 6, 10.7, 5000., -5.7)
-pprint.pprint(stress_period_data)
 
 m.write_input()
