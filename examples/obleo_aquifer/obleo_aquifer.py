@@ -46,7 +46,7 @@ Width = 1e+5 + 11e+5 + 1e+5
 # The height of the model
 H = 1000
 hy = 36500
-sf1 = 1.e-5
+sf1 = 0.25
 
 # Instantiate the ModFlow-Object, ml is here an invented name
 ml = mf.Modflow(modelname=name, exe_name='mf2005', version='mf2005', model_ws=workspace)
@@ -62,7 +62,7 @@ delr = Height / NRow
 delc = Width / NCol
 
 # instantiate the discretization object
-dis = mf.ModflowDis(ml, nlay=NLay, nrow=NRow, ncol=NCol, delr=delr, delc=delc, top=top, botm=bot, laycbd=0, itmuni=5)
+dis = mf.ModflowDis(ml, nlay=NLay, nrow=NRow, ncol=NCol, delr=delr, delc=delc, top=top, botm=bot, laycbd=0, itmuni=5, perlen=30, nper=2)
 
 # every cell in the model has to be defined
 # create an 3-dimensional iBound-array with all cells=1
@@ -86,6 +86,14 @@ bas = mf.ModflowBas(ml, ibound=iBound, strt=start)
 recharge_data = 250.e-3
 rch = mf.ModflowRch(ml, nrchop=1, rech=recharge_data)
 
+# setting up the well package with stress periods
+stress_period_data = {
+    0: [[0, NRow / 2, NCol / 2, 0.]],
+    1:  [[0, NRow / 2, NCol / 2, -4.31e+10]]
+}
+
+wel = mf.ModflowWel(ml, stress_period_data=stress_period_data)
+
 # set the aquifer properties with the lpf-package
 bcf = mf.ModflowBcf(ml, hy=hy, sf1=sf1, laycon=1)
  
@@ -99,15 +107,23 @@ ml.write_input()
 ml.run_model()
 
 hds = fu.HeadFile(os.path.join(workspace, name+'.hds'))
-h = hds.get_data(kstpkper=(0, 0))
 
+h = hds.get_data(kstpkper=(0, 0))
 x = np.linspace(0, Width, NCol)
 y = np.linspace(0, Height, NRow)
-c = plt.contour(x, y, h[0], np.arange(1, 1000, 100))
+c = plt.contour(x, y, h[0], np.arange(500, 1000, 50))
 plt.clabel(c, fmt='%2.1f')
 plt.axis('scaled')
-x1, x2, y1, y2 = plt.axis()
 plt.axis((0, Width, 0, Height))
-plt.savefig(os.path.join(output, name+'_1.png'))
-plt.show()
+plt.savefig(os.path.join(output, name+'_SP1.png'))
+plt.close()
+
+h = hds.get_data(kstpkper=(0, 1))
+x = np.linspace(0, Width, NCol)
+y = np.linspace(0, Height, NRow)
+c = plt.contour(x, y, h[0], np.arange(500, 1000, 50))
+plt.clabel(c, fmt='%2.1f')
+plt.axis('scaled')
+plt.axis((0, Width, 0, Height))
+plt.savefig(os.path.join(output, name+'_SP2.png'))
 plt.close()
