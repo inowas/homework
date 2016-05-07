@@ -23,117 +23,85 @@ if not os.path.exists(workspace):
 if not os.path.exists(output):
     os.makedirs(output)
 
-name = 'obleo'
+# flopy objects
+modelname = 'obleo'
+m = flopy.modflow.Modflow(modelname=modelname, exe_name='mf2005', model_ws=workspace)
 
-# --- Setting up the parameters
-# Groundwater heads
-hLakes = 0  # in the boundaries
+# model domain and grid definition
+ztop = 100.  # top of layer (m rel to msl) !!! mls=mean sea level ???
+botm = -900.  # bottom of layer (m rel to msl) !!! mls=mean sea level ???
+nlay = 1  # number of layers (z)
+nrow = 11  # number of rows (y)
+ncol = 13  # number of columns (x)
+Lx = 13e+5 # length of x model domain, in m
+Ly = 11e+5 # length of y model domain, in m
+delr = Lx / ncol  # row width of cell, in m
+delc = Ly / nrow  # column width of cell, in m
 
-# Number of layers
-NLay = 1
 
-# Number of columns and rows
-# we are assuming that NCol = NRow
-# and we add on the left and right side one more column
-# which are representing the lakes
-NRow = 11
-NCol = 1 + 11 + 1
+# define the stress periods
+nper = 2
+ts = 1  # length of time step, in years
+nstp = 30  # number of time steps
+perlen = nstp * ts  # length of simulation, in years
+steady = True  # steady state or transient
 
-# The length and with of the model in meters
-# To the width of the model area we add on the left and right
-# side one more column which are representing the lakes
-Height = 11e+5
-Width = 1e+5 + 11e+5 + 1e+5
+dis = mf.ModflowDis(m, nlay, nrow, ncol, delr=delr, delc=delc, top=ztop, botm=botm, nper=nper, perlen=perlen, nstp=nstp, steady=steady)
 
-# The height of the model
-H = 1000
-hy = 36500 #hydraulic conductivity
-sf1 = 0.25 #storage coefficient
 
-# Instantiate the ModFlow-Object, ml is here an invented name
-ml = mf.Modflow(modelname=name, exe_name='mf2005', version='mf2005', model_ws=workspace)
+# hydraulic parameters (aquifer properties with the bcf-package)
+hy = 36500 # hydraulic conductivity
+sf = 0.25 # storage coefficient
+laycon = 1 # layer type, confined (0), unconfined (1), constant T, variable S (2), variable T, variable S (default is 3)
+bcf = mf.ModflowBcf(m, hy=hy, sf1=sf, laycon=1)
 
-# The aquifer is about 1000m thick with top elevation of 100m
-top = 100
+# BAS package
+ibound = np.ones((nlay, nrow, ncol)) # # active cells
+ibound[:, :, 0] = -1 # Set every first element of every column to -1
+ibound[:, :, -1] = -1 # Set every last element of every column to -1
+strt = 0 * np.ones((nrow, ncol)) # in the calculation only the -1 cells will be considered (all values can be set to 0)
+bas = mf.ModflowBas(m, ibound=ibound, strt=strt)
 
-# The aquifer is about 1000m thick, so the bottom is estimated to be on -900m
-bot = -900
-
-# Calculation of row-width and col-width
-delr = Height / NRow
-delc = Width / NCol
-
-# instantiate the discretization object
-dis = mf.ModflowDis(ml, nlay=NLay, nrow=NRow, ncol=NCol, delr=delr, delc=delc, top=top, botm=bot, laycbd=0, itmuni=5, 
-					perlen=30, nper=2)
-
-# every cell in the model has to be defined
-# create an 3-dimensional iBound-array with all cells=1
-iBound = np.ones((NLay, NRow, NCol))
-
-# Set every first element of every column to -1
-iBound[:, :, 0] = -1
-
-# Set every last element of every column to -1
-iBound[:, :, -1] = -1
-
-# defining the start-values
-# in the calculation only the -1 cells will be considered
-# because of this, all values can be set to hLakes
-start = 0 * np.ones((NRow, NCol))
-
-# instantiate the modFlow-basic package with iBound and startValues
-bas = mf.ModflowBas(ml, ibound=iBound, strt=start)
 
 # setting up recharge data and recharge package
-recharge_data = 0.250
-rch = mf.ModflowRch(ml, nrchop=1, rech=recharge_data)
+recharge_data = 0.250 # recharge flux mm/year (default is 1.e-3)
+nrchop = 1 # optional code (1: to top grid layer only; 2: to layer defined in irch 3: to highest active cell)
+rch = mf.ModflowRch(m, nrchop=nrchop, rech=recharge_data)
 
 # setting up the well package with stress periods
-stress_period_data = {
-    0: [[0, 5, 6, 0.]],
-    1: [[0, 5, 6, -4e+10]] # previous pumping rate -1e+9
-}
-
-wel = mf.ModflowWel(ml, stress_period_data=stress_period_data)
-
-# set the aquifer properties with the bcf-package
-#Layer type, confined (0), unconfined (1), constant T, variable S (2), variable T, variable S (default is 3)
-bcf = mf.ModflowBcf(ml, hy=hy, sf1=sf1, laycon=1)
-
-# The Strongly Implicit Procedure package is used to solve the finite difference equations 
-# in each step of a MODFLOW stress period
-
-sip = mf.ModflowSip(ml, mxiter=50, hclose=1.e-7)
+pumping_rate = -4e+10 # m^3 / year
+lrcq = {0: [[0, 5, 6, 0.]], 1: [[0, 5, 6, -4e+10]]} 
+wel = mf.ModflowWel(m, stress_period_data=lrcq)
 
 # instantiation of the solver with default values
-pcg = mf.ModflowPcg(ml)
+pcg = mf.ModflowPcg(m) # pre-conjugate gradient solver
 
 # instantiation of the output control with default values
-oc = mf.ModflowOc(ml)
+oc = mf.ModflowOc(m) # output contro
 
-ml.write_input()
-ml.run_model()
+m.write_input()
+m.run_model()
 
-hds = fu.HeadFile(os.path.join(workspace, name+'.hds'))
+hds = fu.HeadFile(os.path.join(workspace, modelname+'.hds'))
 h = hds.get_data(kstpkper=(0, 0))
-x = np.linspace(0, Width, NCol)
-y = np.linspace(0, Height, NRow)
+
+x = np.linspace(0, Lx, ncol)
+y = np.linspace(0, Ly, nrow)
 c = plt.contour(x, y, h[0], np.arange(1, 1000, 50))
 plt.clabel(c, fmt='%2.1f')
 plt.axis('scaled')
-plt.axis((0, Width, 0, Height))
-plt.savefig(os.path.join(output, name+'_SP1.png'))
-plt.close()
+plt.axis((0, Lx, 0, Ly))
+plt.savefig(os.path.join(output, modelname+'_SP1.png'))
+plt.show()
 
 h = hds.get_data(kstpkper=(0, 1))
-x = np.linspace(0, Width, NCol)
-y = np.linspace(0, Height, NRow)
+x = np.linspace(0, Lx, ncol)
+y = np.linspace(0, Ly, nrow)
 c = plt.contour(x, y, h[0], np.arange(1, 1000, 50))
 plt.clabel(c, fmt='%2.1f')
 plt.axis('scaled')
-plt.axis((0, Width, 0, Height))
-plt.savefig(os.path.join(output, name+'_SP2.png'))
-plt.close()
+plt.axis((0, Lx, 0, Ly))
+plt.savefig(os.path.join(output, modelname+'_SP2.png'))
+plt.show()
 
-sip = mf.ModflowSip.load('test.sip',m)
+m.check()
