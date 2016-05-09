@@ -1,0 +1,16 @@
+
+* Gridsize
+* Layernumbers
+* Active/Inactive Cells
+* Hydraulic conductivity in different Layers
+
+* Boudary Conditions General
+    * Number of Stressperiods
+    * Number of Timesteps
+    * Length of Timesteps/Stressperiods
+
+* Boundary Conditions 
+    * River and size of the river in the model
+    * River parameters
+
+
