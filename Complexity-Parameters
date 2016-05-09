@@ -5,7 +5,7 @@
 * Hydraulic conductivity in different Layers
 * Storage capacity in different Layers
 
-* Boudary Conditions
+* Boundary Conditions
 
     ** General
     * Number of Stressperiods
@@ -24,9 +24,12 @@
     ** Recharge
     * 
 
+    ** General head boundary
+    * 
+
 * Flowpackages
     * confined vs. unconfined vs. variable
-    
+
 
 
 
