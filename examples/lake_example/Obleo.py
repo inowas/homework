@@ -46,7 +46,7 @@ nstp = 30  # number of time steps
 perlen = nstp * ts  # length of simulation, in years
 steady = True  # steady state or transient
 
-dis = mf.ModflowDis(m, nlay, nrow, ncol, delr=delr, delc=delc, top=ztop, botm=botm, nper=nper, perlen=perlen, nstp=nstp, steady=steady)
+dis = mf.ModflowDis(m, nlay, nrow, ncol, delr=delr, delc=delc, top=ztop, botm=botm, nper=nper, perlen=perlen, nstp=nstp, steady=steady, itmuni=5)
 
 
 # hydraulic parameters (aquifer properties with the bcf-package)

@@ -7,7 +7,7 @@ import pprint
 import shutil
 
 workspace = os.path.join('ascii')
-output = os.path.join('output')
+output = os.path.join('output_river')
 
 # delete directories if existing
 if os.path.exists(workspace):
@@ -22,7 +22,7 @@ if not os.path.exists(workspace):
 if not os.path.exists(output):
     os.makedirs(output)
 
-name = 'lake_example'
+name = 'lake_example_river'
 
 # --- Setting up the parameters
 # Groundwater heads
@@ -59,7 +59,7 @@ delrow = delcol = L/(N-1)
 # 4
 
 # instantiante the discretization object
-dis = mf.ModflowDis(ml, nlay=Nlay, nrow=N, ncol=N, delr=delrow, delc=delcol, nper=2, top=0.0, botm=bot, laycbd=0)
+dis = mf.ModflowDis(ml, nlay=Nlay, nrow=N, ncol=N, delr=delrow, delc=delcol, top=0.0, nper=3, botm=bot, laycbd=0)
 
 # helping-variable
 Nhalf = (N-1)/2 
@@ -91,21 +91,51 @@ start[Nhalf,Nhalf] = h2
 # instantiate the modflow-basic package with iBound and startvalues
 bas = mf.ModflowBas(ml,ibound=ibound,strt=start)
 
-# Create the well package
-# Remember to use zero-based layer, row, column indices!
-
-stress_period_data ={
-	0:  [
-		[0, 9, 9, -100],
-		[0, 2, 2, -1000]
-		],
+stress_period_data = {
+	0: [
+	    [0, 0, 10, 80, 5000, 70],
+	    [0, 1, 10, 80, 5000, 70],
+	    [0, 2, 10, 80, 5000, 70],
+	    [0, 3, 10, 80, 5000, 70],
+	    [0, 4, 10, 80, 5000, 70],
+	    [0, 5, 10, 80, 5000, 70],
+	    [0, 6, 10, 80, 5000, 70],
+	    [0, 7, 10, 80, 5000, 70],
+	    [0, 8, 10, 80, 5000, 70],
+	    [0, 9, 10, 80, 5000, 70],
+	    [0, 10, 10, 80, 5000, 70]
+	    ],
 	1:  [
-		[0, 9, 9, -100],
-		[0, 2, 2, -1000],
-		]
-}
+	 	[0, 0, 10, 90, 5000, 70],
+	    [0, 1, 10, 90, 5000, 70],
+	    [0, 2, 10, 90, 5000, 70],
+	    [0, 3, 10, 90, 5000, 70],
+	    [0, 4, 10, 90, 5000, 70],
+	    [0, 5, 10, 90, 5000, 70],
+	    [0, 6, 10, 90, 5000, 70],
+	    [0, 7, 10, 90, 5000, 70],
+	    [0, 8, 10, 90, 5000, 70],
+	    [0, 9, 10, 90, 5000, 70],
+	    [0, 10, 10,90, 5000, 70]
+	    ],
 
-wel = mf.ModflowWel(ml, stress_period_data=stress_period_data)
+	2:  [
+	 	[0, 0, 10, 100, 5000, 70],
+	    [0, 1, 10, 100, 5000, 70],
+	    [0, 2, 10, 100, 5000, 70],
+	    [0, 3, 10, 100, 5000, 70],
+	    [0, 4, 10, 100, 5000, 70],
+	    [0, 5, 10, 100, 5000, 70],
+	    [0, 6, 10, 100, 5000, 70],
+	    [0, 7, 10, 100, 5000, 70],
+	    [0, 8, 10, 100, 5000, 70],
+	    [0, 9, 10, 100, 5000, 70],
+	    [0, 10, 10,100, 5000, 70]
+	    ]
+}  
+
+#applied to all stress periods
+riv = mf.ModflowRiv(ml, stress_period_data=stress_period_data)
 
 # set the aquifer properties with the lpf-package
 lpf = mf.ModflowLpf(ml, hk=k)
@@ -120,24 +150,24 @@ ml.write_input()
 ml.run_model()
 
 hds = fu.HeadFile(os.path.join(workspace, name+'.hds'))
-h = hds.get_data(kstpkper=(0, 1))
+h = hds.get_data(kstpkper=(0, 2))
 
 x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[0], np.arange(80,100.1,0.6))
+c = plt.contour(x, y, h[0], np.arange(80,100.1,0.5))
 plt.clabel(c, fmt='%2.1f')
 plt.axis('scaled');
 plt.savefig(os.path.join(output, name+'_1.png'))
 plt.close()
 
 x = y = np.linspace(0, L, N)
-c = plt.contour(x, y, h[-1], np.arange(80,100.1,0.6))
+c = plt.contour(x, y, h[-1], np.arange(80,100.1,0.5))
 plt.clabel(c, fmt='%1.1f')
 plt.axis('scaled');
 plt.savefig(os.path.join(output, name+'_2.png'))
 plt.close()
 
 z = np.linspace(-H/Nlay/2, -H+H/Nlay/2, Nlay)
-c = plt.contour(x, z, h[:,5,:], np.arange(80,100.1,.6))
+c = plt.contour(x, z, h[:,5,:], np.arange(80,100.1,.5))
 plt.axis('scaled');
 plt.savefig(os.path.join(output, name+'_3.png'))
 plt.close()

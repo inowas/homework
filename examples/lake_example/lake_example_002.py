@@ -30,7 +30,7 @@ h1 = 100 #in the boundaries
 h2 = 90  # water-level-lake
 
 # Number of layers
-Nlay = 10
+Nlay = 50
 
 # Number of columns and rows
 # we are assuming that NCol = NRow

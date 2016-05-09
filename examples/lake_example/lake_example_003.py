@@ -30,7 +30,7 @@ h1 = 100 #in the boundaries
 h2 = 90  # water-level-lake
 
 # Number of layers
-Nlay = 10
+Nlay = 100
 
 # Number of columns and rows
 # we are assuming that NCol = NRow
@@ -200,8 +200,8 @@ start[Nhalf,Nhalf] = h2
 # instantiate the modflow-basic package with iBound and startvalues
 bas = mf.ModflowBas(ml,ibound=ibound,strt=start)
  
-# set the aquifer properties with the lpf-package
-lpf = mf.ModflowLpf(ml, hk=k)
+# set the aquifer properties with the bcf-package
+bcf = mf.ModflowBcf(ml)
 
 # instantiation of the solver with default values
 pcg = mf.ModflowPcg(ml)
