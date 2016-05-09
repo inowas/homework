@@ -3,14 +3,30 @@
 * Layernumbers
 * Active/Inactive Cells
 * Hydraulic conductivity in different Layers
+* Storage capacity in different Layers
 
-* Boudary Conditions General
+* Boudary Conditions
+
+    ** General
     * Number of Stressperiods
     * Number of Timesteps
     * Length of Timesteps/Stressperiods
 
-* Boundary Conditions 
+    ** River
     * River and size of the river in the model
     * River parameters
+
+    ** Well
+    * Number of wells
+    * Different pumping rates
+    * Conductivity vs. Well
+
+    ** Recharge
+    * 
+
+* Flowpackages
+    * confined vs. unconfined vs. variable
+    
+
 
 
