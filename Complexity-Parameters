@@ -1,9 +1,14 @@
+* Time-Unit: days
+* Length-Unit: meter
+* 100 Timesteps (days)
 
-* Gridsize
-* Layernumbers
-* Active/Inactive Cells
-* Hydraulic conductivity in different Layers
-* Storage capacity in different Layers
+* Discretization
+    * Gridsize
+    * Layernumbers
+    * Active/Inactive Cells
+    * Hydraulic conductivity in different Layers
+    * Storage capacity in different Layers
+    * Transient
 
 * Boundary Conditions
 
@@ -11,9 +16,9 @@
     * Number of Stressperiods
     * Number of Timesteps
     * Length of Timesteps/Stressperiods
+    * Number of cells with this boundary
 
     ** River
-    * River and size of the river in the model
     * River parameters
 
     ** Well
@@ -28,7 +33,8 @@
     * 
 
 * Flowpackages
-    * confined vs. unconfined vs. variable
+    * BCF vs. LPF
+    * BCF -> confined vs. unconfined vs. variable
 
 
 
