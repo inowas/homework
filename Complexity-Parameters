@@ -1,0 +1,42 @@
+* Time-Unit: days
+* Length-Unit: meter
+* 100 Timesteps (days)
+
+1 * Discretization
+1.1    * Gridsize
+1.2    * Layernumbers
+1.3    * Active/Inactive Cells
+1.4    * Hydraulic conductivity in different Layers
+1.5    * Storage capacity in different Layers
+1.6    * Transient
+
+2 * Boundary Conditions
+
+    ** General
+2.1    * Number of Stressperiods
+2.2    * Number of Timesteps
+2.3    * Length of Timesteps/Stressperiods
+2.4    * Number of cells with this boundary
+
+2.5     ** River
+2.5.1   * River Stage
+2.5.2   * Riverbed Conductance
+
+2.6     ** Well
+2.6.1   * Number of wells
+2.6.2   * Different pumping rates
+2.6.3   * Conductivity vs. Well
+
+2.7     ** Recharge
+2.7.1   * 
+
+2.8     ** General head boundary
+2.8.1   * 
+
+3 * Flowpackages
+3.1    * BCF vs. LPF
+3.2    * BCF -> confined vs. unconfined vs. variable
+
+
+
+
