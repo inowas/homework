@@ -3,9 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import flopy.modflow as mf
 import flopy.utils as fu
-import pprint
 import shutil
-import flopy
 
 workspace = os.path.join('ascii')
 output = os.path.join('output')
@@ -25,7 +23,7 @@ if not os.path.exists(output):
 
 # flopy objects
 modelname = 'obleo'
-m = flopy.modflow.Modflow(modelname=modelname, exe_name='mf2005', model_ws=workspace)
+m = mf.Modflow(modelname=modelname, exe_name='mf2005', model_ws=workspace)
 
 # model domain and grid definition
 ztop = 100.  # top of layer (m rel to msl) !!! mls=mean sea level ???
@@ -55,7 +53,7 @@ sf = 0.25 # storage coefficient
 laycon = 1 # layer type, confined (0), unconfined (1), constant T, variable S (2), variable T, variable S (default is 3)
 bcf = mf.ModflowBcf(m, hy=hy, sf1=sf, laycon=1)
 
-# BAS package
+# BAS package (Basic Package)
 ibound = np.ones((nlay, nrow, ncol)) # # active cells
 ibound[:, :, 0] = -1 # Set every first element of every column to -1
 ibound[:, :, -1] = -1 # Set every last element of every column to -1
@@ -77,7 +75,7 @@ wel = mf.ModflowWel(m, stress_period_data=lrcq)
 pcg = mf.ModflowPcg(m) # pre-conjugate gradient solver
 
 # instantiation of the output control with default values
-oc = mf.ModflowOc(m) # output contro
+oc = mf.ModflowOc(m) # output control
 
 m.write_input()
 m.run_model()
@@ -87,7 +85,7 @@ h = hds.get_data(kstpkper=(0, 0))
 
 x = np.linspace(0, Lx, ncol)
 y = np.linspace(0, Ly, nrow)
-c = plt.contour(x, y, h[0], np.arange(1, 1000, 50))
+c = plt.contour(x, y, h[0], np.arange(500, 1000, 50))
 plt.clabel(c, fmt='%2.1f')
 plt.axis('scaled')
 plt.axis((0, Lx, 0, Ly))
@@ -97,7 +95,7 @@ plt.show()
 h = hds.get_data(kstpkper=(0, 1))
 x = np.linspace(0, Lx, ncol)
 y = np.linspace(0, Ly, nrow)
-c = plt.contour(x, y, h[0], np.arange(1, 1000, 50))
+c = plt.contour(x, y, h[0], np.arange(500, 1000, 50))
 plt.clabel(c, fmt='%2.1f')
 plt.axis('scaled')
 plt.axis((0, Lx, 0, Ly))
