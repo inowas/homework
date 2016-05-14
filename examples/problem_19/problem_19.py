@@ -1,9 +1,16 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.colors as mc
 import flopy.modflow as mf
 import flopy.utils as fu
 import shutil
+
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib import cm
+from matplotlib.ticker import LinearLocator, FormatStrFormatter
+
+
 
 workspace = os.path.join('ascii')
 output = os.path.join('output')
@@ -36,6 +43,9 @@ NCol = 55
 # The length and with of the model
 delRow = 100.0  # ft
 delCol = 100.0  # ft
+
+Lx = delCol * NCol
+Ly = delRow * NRow
 
 # Instantiating the ModFlow-Object, ml is here an invented name
 ml = mf.Modflow(modelname=name, exe_name='mf2005', version='mf2005', model_ws=workspace)
@@ -101,7 +111,7 @@ start = initialHead * np.ones((NRow, NCol))
 bas = mf.ModflowBas(ml, ibound=iBound, strt=start)
 
 # Setup well-data
-stress_period_data = {0: [0, 28, 31, -.963]}
+stress_period_data = {0: [0, 28, 31, -1.963]}
 # instantiate the well package
 wel = mf.ModflowWel(ml, stress_period_data=stress_period_data)
 
@@ -219,3 +229,26 @@ oc = mf.ModflowOc(ml)
 
 ml.write_input()
 ml.run_model()
+
+
+hds = fu.HeadFile(os.path.join(workspace, name+'.hds'))
+h = hds.get_data(kstpkper=(9, 0))
+
+
+# Output based on this example: http://matplotlib.org/mpl_toolkits/mplot3d/tutorial.html#surface-plots
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+X = np.linspace(0, Lx, NCol)
+Y = np.linspace(0, Ly, NRow)
+X, Y = np.meshgrid(X, Y)
+Z = h[0]  # set layer 1
+Z[Z < -900] = -5  # set all no-flow values to -5 -> a dirty hack until we find something nicer
+
+norm = mc.Normalize(vmin=-3, vmax=np.max(Z), clip=False)  # set min/max of the colors
+surf = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.coolwarm, linewidth=0, antialiased=False, norm=norm)
+ax.set_zlim(-5, 0)  # set limit of z-axis
+ax.zaxis.set_major_locator(LinearLocator(10))
+ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
+fig.colorbar(surf, shrink=0.5, aspect=5)
+plt.show()
+
