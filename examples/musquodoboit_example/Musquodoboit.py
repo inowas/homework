@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 import flopy.modflow as mf
 import flopy.utils as fu
 import shutil
+import matplotlib.colors as mc
+
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib import cm
+from matplotlib.ticker import LinearLocator, FormatStrFormatter
 
 workspace = os.path.join('ascii')
 output = os.path.join('output')
@@ -44,7 +49,7 @@ nstp = 10  # number of time steps
 perlen = 0.12960e+06  # length of simulation, in seconds
 steady = False  # steady state or transient
 
-dis = mf.ModflowDis(m, nlay, nrow, ncol, delr=delr, delc=delc, top=ztop, botm=botm, nper=nper, perlen=0.12960e+06, nstp=nstp, steady=steady, itmuni=1, lenuni=1,tsmult=1.414,)
+dis = mf.ModflowDis(m, nlay, nrow, ncol, delr=delr, delc=delc, top=ztop, botm=botm, nper=nper, perlen=perlen, nstp=nstp, steady=steady, itmuni=1, lenuni=1,tsmult=1.414,)
 
 
 # BAS package (Basic Package)
@@ -149,7 +154,7 @@ bcf = mf.ModflowBcf(m,sf1=sf, laycon=0, tran=tran)
 
 # setting up the well package with stress periods
 pumping_rate = -0.963 # ft^3 / s
-lrcq = [[0, 28, 31, -0.963]]
+lrcq = [[0, 28, 31, -1.963]]
 wel = mf.ModflowWel(m, stress_period_data=lrcq)
 
 # setting up the river package with stress periods
@@ -215,13 +220,27 @@ m.write_input()
 m.run_model()
 
 hds = fu.HeadFile(os.path.join(workspace, modelname+'.hds'))
-h = hds.get_data(kstpkper=(0, 0))
+h = hds.get_data(kstpkper=(9, 0))
 
-x = np.linspace(0, Lx, ncol)
-y = np.linspace(0, Ly, nrow)
-c = plt.contour(x, y, h[-1], np.arange(0, 100, 50))
-plt.clabel(c, fmt='%2.1f')
-plt.axis('scaled')
-plt.axis((0, Lx, 0, Ly))
-plt.savefig(os.path.join(output, modelname+'_1.png'))
+
+# Output based on this example: http://matplotlib.org/mpl_toolkits/mplot3d/tutorial.html#surface-plots
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+X = np.linspace(0, Lx, ncol)
+Y = np.linspace(0, Ly, nrow)
+X, Y = np.meshgrid(X, Y)
+Z = h[0]  # set layer 1
+Z[Z < -900] = -5  # set all no-flow values to -5 -> a dirty hack until we find something nicer
+ax.set_xlabel('length')
+ax.set_ylabel('width')
+ax.set_zlabel('height')
+
+norm = mc.Normalize(vmin=-3, vmax=np.max(Z), clip=False)  # set min/max of the colors
+surf = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.BrBG, linewidth=0, antialiased=False, norm=norm)
+ax.set_zlim(-5, 0)  # set limit of z-axis
+ax.xaxis.set_major_locator(LinearLocator(3))
+ax.yaxis.set_major_locator(LinearLocator(3))
+ax.zaxis.set_major_locator(LinearLocator(4))
+ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
+fig.colorbar(surf, shrink=0.7, aspect=10)
 plt.show()
