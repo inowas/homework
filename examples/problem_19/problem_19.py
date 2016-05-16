@@ -111,7 +111,7 @@ start = initialHead * np.ones((NRow, NCol))
 bas = mf.ModflowBas(ml, ibound=iBound, strt=start)
 
 # Setup well-data
-stress_period_data = {0: [0, 28, 31, -1.963]}
+stress_period_data = {0: [0, 28, 31, -.963]}
 # instantiate the well package
 wel = mf.ModflowWel(ml, stress_period_data=stress_period_data)
 
