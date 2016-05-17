@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 import flopy.modflow as mf
 import flopy.utils as fu
 import shutil
+import matplotlib.colors as mc
+
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib import cm
+from matplotlib.ticker import LinearLocator, FormatStrFormatter
 
 workspace = os.path.join('ascii')
 output = os.path.join('output')
@@ -100,6 +105,27 @@ plt.clabel(c, fmt='%2.1f')
 plt.axis('scaled')
 plt.axis((0, Lx, 0, Ly))
 plt.savefig(os.path.join(output, modelname+'_SP2.png'))
+plt.show()
+
+# Output based on this example: http://matplotlib.org/mpl_toolkits/mplot3d/tutorial.html#surface-plots
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+X = np.linspace(0, Lx, ncol)
+Y = np.linspace(0, Ly, nrow)
+X, Y = np.meshgrid(X, Y)
+Z = h[0]  # set layer 1
+
+norm = mc.Normalize(vmin=0, vmax=np.max(Z), clip=False)  # set min/max of the colors
+surf = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.Set1, linewidth=-0.005, antialiased=False, norm=norm)
+ax.set_zlim(0, 1000)  # set limit of z-axis
+ax.xaxis.set_major_locator(LinearLocator(2))
+ax.yaxis.set_major_locator(LinearLocator(2))
+ax.zaxis.set_major_locator(LinearLocator(2))
+ax.zaxis.set_major_formatter(FormatStrFormatter('%.01f'))
+fig.colorbar(surf, shrink=0.7, aspect=10)
+plt.savefig(os.path.join(output, modelname+'_SP3.png'))
+ax.set_xlabel('meters')
+ax.set_zlabel('meters')
 plt.show()
 
 m.check()

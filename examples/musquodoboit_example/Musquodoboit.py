@@ -154,7 +154,7 @@ bcf = mf.ModflowBcf(m,sf1=sf, laycon=0, tran=tran)
 
 # setting up the well package with stress periods
 pumping_rate = -0.963 # ft^3 / s
-lrcq = [[0, 28, 31, -1.963]]
+lrcq = [[0, 28, 31, -5.963]]
 wel = mf.ModflowWel(m, stress_period_data=lrcq)
 
 # setting up the river package with stress periods
@@ -230,17 +230,18 @@ X = np.linspace(0, Lx, ncol)
 Y = np.linspace(0, Ly, nrow)
 X, Y = np.meshgrid(X, Y)
 Z = h[0]  # set layer 1
-Z[Z < -900] = -5  # set all no-flow values to -5 -> a dirty hack until we find something nicer
+Z[Z < -900] = -5 # set all no-flow values to -5 -> a dirty hack until we find something nicer
 ax.set_xlabel('length')
 ax.set_ylabel('width')
 ax.set_zlabel('height')
 
-norm = mc.Normalize(vmin=-3, vmax=np.max(Z), clip=False)  # set min/max of the colors
-surf = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.BrBG, linewidth=0, antialiased=False, norm=norm)
+norm = mc.Normalize(vmin=0, vmax=1, clip=False)  # set min/max of the colors
+surf = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.BrBG, linewidth=0.05, antialiased=False, norm=norm)
 ax.set_zlim(-5, 0)  # set limit of z-axis
 ax.xaxis.set_major_locator(LinearLocator(3))
 ax.yaxis.set_major_locator(LinearLocator(3))
 ax.zaxis.set_major_locator(LinearLocator(4))
 ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 fig.colorbar(surf, shrink=0.7, aspect=10)
+plt.savefig('/users/Alexey/desktop/descopgrid_rain.png')
 plt.show()
