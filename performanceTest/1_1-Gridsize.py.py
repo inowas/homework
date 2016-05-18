@@ -1,7 +1,17 @@
+"""
+ This script is part of a study-project by TU-Dresden
+ We try to investigate model-complexity with calculation time
+
+ This script compares different gridSizes, where one Argument will be needed.
+ We are defining number of rows equal number of columns.
+
+ Call it for example: python3 1_1-Gridsize.py <number of rows/cols>
+"""
 import os
 import numpy as np
 import flopy.modflow as mf
 import shutil
+import sys
 
 workspace = os.path.join('ascii')
 
@@ -12,7 +22,7 @@ if os.path.exists(workspace):
 if not os.path.exists(workspace):
     os.makedirs(workspace)
 
-name = 'lake_base_example'
+name = 'gridsize_performance_test'
 
 # --- Setting up the parameters
 # Groundwater heads
@@ -24,7 +34,7 @@ NLay = 10
 
 # Number of columns and rows
 # we are assuming that NCol = NRow
-N = 101
+N = int(sys.argv[1])
 
 # The length and with of the model
 L = 400.0 
@@ -42,11 +52,17 @@ bot = np.linspace(-H / NLay, -H, NLay)
 # Calculation of row-width and col-width
 delRow = delCol = L/(N-1)
 
+# Number of timePeriods
+nPer = 100
+
+# Set steady of all periods to false
+steady = np.zeros(100)
+
 # Instantiate the discretization object
-dis = mf.ModflowDis(ml, nlay=NLay, nrow=N, ncol=N, delr=delRow, delc=delCol, top=0.0, botm=bot, laycbd=0, lenuni=2, itmuni=4, steady=False, nper=100, perlen=1)
+dis = mf.ModflowDis(ml, nlay=NLay, nrow=N, ncol=N, delr=delRow, delc=delCol, top=0.0, botm=bot, laycbd=0, lenuni=2, itmuni=4, steady=steady, nper=nPer, perlen=1)
 
 # helping-variable
-NHalf = (N-1)/2
+NHalf = int((N-1)/2)
 
 # iBound-Configuration
 iBound = np.ones((NLay, N, N))
@@ -89,3 +105,6 @@ oc = mf.ModflowOc(ml)
 
 ml.write_input()
 ml.run_model()
+
+if os.path.exists(workspace):
+    shutil.rmtree(workspace)
