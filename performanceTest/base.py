@@ -19,7 +19,7 @@ if os.path.exists(workspace):
 if not os.path.exists(workspace):
     os.makedirs(workspace)
 
-name = 'gridsize_performance_test'
+name = 'performance_test'
 
 # --- Setting up the parameters
 # Groundwater heads
