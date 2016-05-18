@@ -1,7 +1,7 @@
 """
  This script is part of a study-project by TU-Dresden
   We try to investigate model-complexity with calculation time
-  This script compares different hydraulic conductivities, where one Argument will be needed.
+  This script compares different hydraulic conductivities, where one Argument will be needed
 
 """
 import os
@@ -19,7 +19,7 @@ if os.path.exists(workspace):
 if not os.path.exists(workspace):
     os.makedirs(workspace)
 
-name = 'gridsize_performance_test'
+name = 'performance_test'
 
 # --- Setting up the parameters
 # Groundwater heads
