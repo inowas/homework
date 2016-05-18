@@ -13,3 +13,12 @@ python 1_4-HydralicConductivities.py 1
 python 1_4-HydralicConductivities.py 2
 python 1_5-StorageCapacities.py 1
 python 1_5-StorageCapacities.py 2
+python 2_1-StressPeriodsNumber.py 10
+python 2_1-StressPeriodsNumber.py 100
+python 2_1-StressPeriodsNumber.py 1000
+python 2_2-TimeStepsNumber.py 10
+python 2_2-TimeStepsNumber.py 100
+python 2_2-TimeStepsNumber.py 1000
+python 2_3-TimeStepsLength.py 1
+python 2_3-TimeStepsLength.py 100
+python 2_3-TimeStepsLength.py 10000
