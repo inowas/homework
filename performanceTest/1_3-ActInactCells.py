@@ -40,7 +40,7 @@ L = 400.0
 
 # The height of the model
 H = 50.0 
-k = 1.0
+k = np.random.uniform(1, 10)
 
 # Instantiating the ModFlow-Object, ml is here an invented name
 ml = mf.Modflow(modelname=name, exe_name='mf2005', version='mf2005', model_ws=workspace)
