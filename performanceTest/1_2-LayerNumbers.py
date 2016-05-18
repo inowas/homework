@@ -1,10 +1,8 @@
 """
  This script is part of a study-project by TU-Dresden
  We try to investigate model-complexity with calculation time
+ This script compares different numbers of lyers, where one Argument will be needed
 
-  This script compares different numbers of lyers, where one Argument will be needed.
-
-  Call it for example: python3 1_2-LayerNumbers.py <number of layers>
 """
 import os
 import numpy as np
@@ -21,7 +19,7 @@ if os.path.exists(workspace):
 if not os.path.exists(workspace):
     os.makedirs(workspace)
 
-name = 'gridsize_performance_test'
+name = 'performance_test'
 
 # --- Setting up the parameters
 # Groundwater heads
