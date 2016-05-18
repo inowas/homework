@@ -9,3 +9,5 @@ python 1_2-LayerNumbers.py 1000
 python 1_3-ActInactCells.py 0
 python 1_3-ActInactCells.py 50
 python 1_3-ActInactCells.py 100
+python 1_4-HydralicConductivities.py 1
+python 1_4-HydralicConductivities.py 2
