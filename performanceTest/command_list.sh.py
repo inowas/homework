@@ -11,3 +11,5 @@ python 1_3-ActInactCells.py 50
 python 1_3-ActInactCells.py 100
 python 1_4-HydralicConductivities.py 1
 python 1_4-HydralicConductivities.py 2
+python 1_5-StorageCapacities.py 1
+python 1_5-StorageCapacities.py 2
