@@ -2,10 +2,10 @@
  This script is part of a study-project by TU-Dresden
  We try to investigate model-complexity with calculation time
 
- This script compares different gridSizes, where one Argument will be needed.
- We are defining number of rows equal number of columns.
+ This script compares different grid sizes, where one argument will be needed.
+ Number of rows equal number of columns.
 
- Call it for example: python3 1_1-Gridsize.py <number of rows/cols>
+ Call it: python3 1_1-Gridsize.py <number of rows/cols>
 """
 import os
 import numpy as np
