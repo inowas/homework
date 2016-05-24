@@ -91,17 +91,11 @@ start[NHalf, NHalf] = h2
 bas = mf.ModflowBas(ml, ibound=iBound, strt=start)
 
 # set the aquifer properties with the lpf-package
-
-if int(sys.argv[1])==1:
-	k = np.random.randint(10e-4, 10e+4)
-	a = np.random.randint(10e-4, 10e+4)
-	b = np.random.randint(10e-4, 10e+4)
-	c = np.random.randint(10e-4, 10e+4)
-	lpf = mf.ModflowLpf(ml, chani=k, hk=a, hani=b, vka=c)
-
-if int(sys.argv[1])==2:
-	k = 1
-	lpf = mf.ModflowLpf(ml, hk=k)
+# hydraulic parameters (aquifer properties with the bcf-package)
+hy = int(sys.argv[1]) # hydraulic conductivity
+sf = 0.25 # storage coefficient
+laycon = 0 # layer type, confined (0), unconfined (1), constant T, variable S (2), variable T, variable S (default is 3)
+bcf = mf.ModflowBcf(ml, laycon=laycon, hy=hy, sf1=sf)
 
 # instantiation of the solver with default values
 pcg = mf.ModflowPcg(ml)
