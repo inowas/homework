@@ -88,16 +88,27 @@ start = h1 * np.ones((N, N))
 # and the center value is set to h2
 start[NHalf, NHalf] = h2
 
+# set center cell in upper layer to constant head (-1)
+iBound[0, NHalf, NHalf] = -1
+
+# defining the start-values
+# in the calculation only the -1 cells will be considered
+# all values are set to h1
+start = h1 * np.ones((N, N))
+
+# and the center value is set to h2
+start[NHalf, NHalf] = h2
+
 # Instantiate the ModGlow-basic package with iBound and StartValues
 bas = mf.ModflowBas(ml, ibound=iBound, strt=start)
 
-if int(sys.argv[1])==1:
-	lpf = mf.ModflowLpf(ml, hk=k)
+# set the aquifer properties with the lpf-package
+# hydraulic parameters (aquifer properties with the bcf-package)
+hy = 1 # hydraulic conductivity
+sf = int(sys.argv[1]) # storage coefficient
+laycon = 0 # layer type, confined (0), unconfined (1), constant T, variable S (2), variable T, variable S (default is 3)
+bcf = mf.ModflowBcf(ml, laycon=laycon, hy=hy, sf1=sf)
 
-if int(sys.argv[1])==2:
-	lpf = mf.ModflowLpf(ml, hk=k, storagecoefficient=True, ss=np.random.uniform(10e-6, 10e-4), sy=np.random.random())
-
- 
 # instantiation of the solver with default values
 pcg = mf.ModflowPcg(ml)
 
