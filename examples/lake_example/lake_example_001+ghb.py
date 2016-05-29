@@ -1,9 +1,9 @@
+'GHB Package'
 import os
 import numpy as np
 import matplotlib.pyplot as plt
 import flopy.modflow as mf
 import flopy.utils as fu
-import pprint
 import shutil
 
 workspace = os.path.join('ascii')
@@ -189,7 +189,3 @@ c = plt.contour(x, z, h[:,5,:], np.arange(80,100.1,.6))
 plt.axis('scaled');
 plt.savefig(os.path.join(output, name+'_L3.png'))
 plt.close()
-
-# forloop ends when the next code line starts.Everything has to be tab.
-# Variable for forloop cant be the same as another one - "layer_number"
-# to run the forloop use "str" before name.
