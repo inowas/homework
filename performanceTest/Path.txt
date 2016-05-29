@@ -1,0 +1,1 @@
+cd /cygdrive/c/Users/Alexey/Project/homework/performanceTest
