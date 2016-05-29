@@ -1,9 +1,15 @@
+''' 3D Figure added '''
+
 import os
 import numpy as np
 import matplotlib.pyplot as plt
 import flopy.modflow as mf
 import flopy.utils as fu
 import shutil
+import matplotlib.colors as mc
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib import cm
+from matplotlib.ticker import LinearLocator, FormatStrFormatter
 
 workspace = os.path.join('ascii')
 output = os.path.join('output')
@@ -233,3 +239,22 @@ c = plt.contour(x, z, h[:,50,:], np.arange(90,100.1,.2))
 plt.axis('scaled');
 plt.savefig(os.path.join(output, name+'_3.png'))
 plt.close()
+# Output based on this example: http://matplotlib.org/mpl_toolkits/mplot3d/tutorial.html#surface-plots
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+X = np.linspace(0, L, N)
+Y = np.linspace(0, L, N)
+X, Y = np.meshgrid(X, Y)
+Z = h[-1]  # set layer 1
+
+norm = mc.Normalize(vmin=99, vmax=np.max(Z), clip=False)  # set min/max of the colors
+surf = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.Blues, linewidth=-0.0025, antialiased=False, norm=norm)
+ax.set_zlim(98.8, 100)  # set limit of z-axis
+ax.xaxis.set_major_locator(LinearLocator(6))
+ax.yaxis.set_major_locator(LinearLocator(6))
+ax.zaxis.set_major_locator(LinearLocator(6))
+ax.zaxis.set_major_formatter(FormatStrFormatter('%.1f'))
+fig.colorbar(surf, shrink=0.7, aspect=10)
+plt.savefig(os.path.join(output, name+'_4.png'))
+ax.set_xlabel('meters')
+plt.show()
