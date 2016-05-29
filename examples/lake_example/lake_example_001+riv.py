@@ -1,9 +1,9 @@
+'RIV package'
 import os
 import numpy as np
 import matplotlib.pyplot as plt
 import flopy.modflow as mf
 import flopy.utils as fu
-import pprint
 import shutil
 
 workspace = os.path.join('ascii')
