@@ -1,3 +1,5 @@
+'Number of layers = 10; Figures'
+
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -30,7 +32,7 @@ h1 = 100 #in the boundaries
 h2 = 90  # water-level-lake
 
 # Number of layers
-Nlay = 50
+Nlay = 10
 
 # Number of columns and rows
 # we are assuming that NCol = NRow
