@@ -109,12 +109,15 @@ class Modelarea(object):
         
         area_line_rows = np.ones(len(self.line_rows), dtype = np.int32) * (self.ny - 1) - np.array(self.line_rows)
         area_line_cols = np.array(self.line_cols)
+        print area_line_rows
+        print area_line_cols
         empty_rows = []
         empty_cols = []
         for i in range(self.ny):
-            empty_cols += range(self.ny)
+            empty_cols += range(self.nx)
             empty_rows += [i] * self.nx
             #Lists of cols and rows to be removed from the entire list:
+
         rem_cols = []
         rem_rows = []
         for i in range(len(area_line_cols)):
@@ -122,6 +125,7 @@ class Modelarea(object):
             rem_rows.append(area_line_rows[i] * self.nx + area_line_cols[i])
         rem_rows = list(set(rem_rows))
         rem_cols = list(set(rem_cols))
+
         for i in sorted(rem_cols, reverse=True):
             del empty_cols[i]
         for i in sorted(rem_rows, reverse=True):
@@ -143,23 +147,23 @@ class Modelarea(object):
                 inner_cell_idx.append(0)
             else:
                 inner_cell_idx.append(1)
-
-        self.ibound = np.zeros((int(number_of_layers), self.nx, self.ny), dtype=np.int32)
+        self.ibound = np.zeros((int(number_of_layers), self.ny, self.nx), dtype=np.int32)
         for i in range(len(empty_rows)):
             self.ibound[:, empty_rows[i], empty_cols[i]] = inner_cell_idx[i]
+
         for i in range(len(area_line_rows)):
             self.ibound[:, area_line_rows[i], area_line_cols[i]] = 1
 # If you want to set boundary cells to -1 or whatever change the ' = 1' above to number that you want
         return self.ibound
 #######################################################################
        
-nx, ny = 100, 100
-xmin, xmax, ymin, ymax = 0., 40., 0., 40.
+nrow = 54
+ncol = 44
+nx, ny = ncol, nrow
+xmin, xmax, ymin, ymax = 0., 45., 0., 54.
 
-line = [[5.,5.],[11.,25.], [35.,40.],[38.,10.],[5.,5.]]
-
+line = [[16.,0.],[14.,7.],[15.,14.],[8.,21.],[8.,25.],[0.,23.],[0.,24.],[5.,31.],[5.,35.],[7.,45.],[8.,50.],[11.,37.],[13.,37.],[16.,34.],[18.,36.],[21.,36.],[22.,35.],[23.,35.],[24.,43.],[23.,44.],[23.,50.],[27.,54.],[33.,48.],[35.,49.],[43.,40.],[44.,35.],[44.,34.],[42.,33.],[40.,32.],[40.,29.],[43.,25.],[44.,17.], [41.,15.],[44.,19.],[26.,17.],[16.,0.]]
 MA = Modelarea(nx, ny, xmin, xmax, ymin, ymax)
 ibound = MA.give_ibound(line, 1)
-
 ########
 plt.imshow(ibound[0], interpolation = 'nearest')
