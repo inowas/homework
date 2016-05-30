@@ -21,6 +21,8 @@ if not os.path.exists(workspace):
 
 name = 'performance_test'
 
+print 'Running ' + sys.argv[0] + ' ' + sys.argv[1]
+
 # --- Setting up the parameters
 # Groundwater heads
 h1 = 100  # in the boundaries
@@ -31,7 +33,7 @@ NLay = int(sys.argv[1])
 
 # Number of columns and rows
 # we are assuming that NCol = NRow
-N = 101
+N = 11
 
 # The length and with of the model
 L = 400.0 

@@ -1,8 +1,6 @@
 """
  This script is part of a study-project by TU-Dresden
  We try to investigate model-complexity with calculation time
- This script compares different grid sizes, where one argument will be needed
- Number of rows equal number of columns
  
 """
 import os
@@ -21,6 +19,8 @@ if not os.path.exists(workspace):
     os.makedirs(workspace)
 
 name = 'performance_test'
+
+print 'Running ' + sys.argv[0] + ' ' + sys.argv[1]
 
 # --- Setting up the parameters
 # Groundwater heads

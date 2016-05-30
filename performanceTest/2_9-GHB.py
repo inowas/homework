@@ -1,8 +1,6 @@
 """
  This script is part of a study-project by TU-Dresden
   We try to investigate model-complexity with calculation time
-  Base script 'Obleo'
-
 """
 import os
 import numpy as np
@@ -20,6 +18,8 @@ if not os.path.exists(workspace):
     os.makedirs(workspace)
 
 name = 'performance_test'
+
+print 'Running ' + sys.argv[0] + ' ' + sys.argv[1]
 
 # --- Setting up the parameters
 # Groundwater heads
@@ -99,16 +99,16 @@ lpf = mf.ModflowLpf(ml, hk=k)
 gh = int(sys.argv[1])
 
 if  gh==1:
-	lrgh = [[0, 0, 10, 90, 100],
-        	[0, 1, 10, 90, 100],
-       		[0, 2, 10, 90, 100],
-        	[0, 3, 10, 90, 100],
-        	[0, 4, 10, 90, 100],
-        	[0, 5, 10, 90, 100],
-        	[0, 6, 10, 90, 100],
-        	[0, 7, 10, 90, 100],
-        	[0, 8, 10, 90, 100],
-        	[0, 9, 10, 90, 100]]
+	lrgh = [[0, 0, 9, 90, 100],
+        	[0, 1, 9, 90, 100],
+       		[0, 2, 9, 90, 100],
+        	[0, 3, 9, 90, 100],
+        	[0, 4, 9, 90, 100],
+        	[0, 5, 9, 90, 100],
+        	[0, 6, 9, 90, 100],
+        	[0, 7, 9, 90, 100],
+        	[0, 8, 9, 90, 100],
+        	[0, 9, 9, 90, 100]]
 
 	ghb = mf.ModflowGhb(ml, stress_period_data=lrgh)
 
