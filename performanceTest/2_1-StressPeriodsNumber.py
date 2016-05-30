@@ -52,13 +52,13 @@ bot = np.linspace(-H / NLay, -H, NLay)
 delRow = delCol = L/(N-1)
 
 # Number of timePeriods
-nPer = 100
+nPer = int(sys.argv[1])
 
 # Set steady of all periods to false
-steady = np.zeros(100)
+steady = np.zeros(int(sys.argv[1]))
 
 # Instantiate the discretization object
-dis = mf.ModflowDis(ml, nlay=NLay, nrow=N, ncol=N, delr=delRow, delc=delCol, top=0.0, botm=bot, laycbd=0, lenuni=2, itmuni=4, steady=steady, nper=int(sys.argv[1]), perlen=1)
+dis = mf.ModflowDis(ml, nlay=NLay, nrow=N, ncol=N, delr=delRow, delc=delCol, top=0.0, botm=bot, laycbd=0, lenuni=2, itmuni=4, steady=steady, nper=nPer, perlen=1)
 
 # helping-variable
 NHalf = int((N-1)/2)
