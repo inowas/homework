@@ -20,6 +20,8 @@ if os.path.exists(workspace):
 if not os.path.exists(workspace):
     os.makedirs(workspace)
 
+print 'Running ' + sys.argv[0] + ' ' + sys.argv[1]
+
 # flopy objects
 modelname = 'performance_test'
 m = mf.Modflow(modelname=modelname, exe_name='mf2005', model_ws=workspace)
