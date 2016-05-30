@@ -12,7 +12,6 @@ import sys
 
 workspace = os.path.join('ascii')
 
-
 # delete directories if existing
 if os.path.exists(workspace):
     shutil.rmtree(workspace)
@@ -20,64 +19,91 @@ if os.path.exists(workspace):
 if not os.path.exists(workspace):
     os.makedirs(workspace)
 
-# flopy objects
-modelname = 'performance_test'
-m = mf.Modflow(modelname=modelname, exe_name='mf2005', model_ws=workspace)
+name = 'performance_test'
 
-# model domain and grid definition
-ztop = 100.  # top of layer (m rel to msl) !!! mls=mean sea level ???
-botm = -900.  # bottom of layer (m rel to msl) !!! mls=mean sea level ???
-nlay = 1  # number of layers (z)
-nrow = 11  # number of rows (y)
-ncol = 13  # number of columns (x)
-Lx = 13e+5 # length of x model domain, in m
-Ly = 11e+5 # length of y model domain, in m
-delr = Lx / ncol  # row width of cell, in m
-delc = Ly / nrow  # column width of cell, in m
+print 'Running ' + sys.argv[0] + ' ' + sys.argv[1]
+
+# --- Setting up the parameters
+# Groundwater heads
+h1 = 100  # in the boundaries
+h2 = 90   # water-level-lake
+
+# Number of layers
+NLay = 10
+
+# Number of columns and rows
+# we are assuming that NCol = NRow
+N = 11
+
+# The length and with of the model
+L = 400.0 
+
+# The height of the model
+H = 50.0 
+k = 1.0
+
+# Instantiating the ModFlow-Object, ml is here an invented name
+ml = mf.Modflow(modelname=name, exe_name='mf2005', version='mf2005', model_ws=workspace)
+
+# Calculation of the bottom-height of each layer
+bot = np.linspace(-H / NLay, -H, NLay)
+
+# Calculation of row-width and col-width
+delRow = delCol = L/(N-1)
+
+# Number of timePeriods
+nPer = 100
+
+# Set steady of all periods to false
+steady = np.zeros(100)
+
+# Instantiate the discretization object
+dis = mf.ModflowDis(ml, nlay=NLay, nrow=N, ncol=N, delr=delRow, delc=delCol, top=0.0, botm=bot, laycbd=0, lenuni=2, itmuni=4, steady=steady, nper=int(sys.argv[1]), perlen=1)
+
+# helping-variable
+NHalf = int((N-1)/2)
+
+# iBound-Configuration
+iBound = np.ones((NLay, N, N))
+
+# Set all elements in the first row to -1
+iBound[:, 0, :] = -1
+
+# Set all elements in the last row to -1
+iBound[:, -1, :] = -1
+
+# Set every first element of every column to -1
+iBound[:, :, 0] = -1
+
+# Set every last element of every column to -1
+iBound[:, :, -1] = -1
 
 
-# define the stress periods
-nper = int(sys.argv[1])
-ts = 1  # length of time step, in years
-nstp = 30  # number of time steps
-perlen = nstp * ts  # length of simulation, in years
-steady = True  # steady state or transient
+# set center cell in upper layer to constant head (-1)
+iBound[0, NHalf, NHalf] = -1
 
-dis = mf.ModflowDis(m, nlay, nrow, ncol, delr=delr, delc=delc, top=ztop, botm=botm, nper=nper, perlen=perlen, nstp=nstp, steady=steady, itmuni=5)
+# defining the start-values
+# in the calculation only the -1 cells will be considered
+# all values are set to h1
+start = h1 * np.ones((N, N))
 
+# and the center value is set to h2
+start[NHalf, NHalf] = h2
 
-# hydraulic parameters (aquifer properties with the bcf-package)
-hy = 36500 # hydraulic conductivity
-sf = 0.25 # storage coefficient
-laycon = 1 # layer type, confined (0), unconfined (1), constant T, variable S (2), variable T, variable S (default is 3)
-bcf = mf.ModflowBcf(m, hy=hy, sf1=sf, laycon=1)
+# Instantiate the ModGlow-basic package with iBound and StartValues
+bas = mf.ModflowBas(ml, ibound=iBound, strt=start)
 
-# BAS package (Basic Package)
-ibound = np.ones((nlay, nrow, ncol)) # # active cells
-ibound[:, :, 0] = -1 # Set every first element of every column to -1
-ibound[:, :, -1] = -1 # Set every last element of every column to -1
-strt = 0 * np.ones((nrow, ncol)) # in the calculation only the -1 cells will be considered (all values can be set to 0)
-bas = mf.ModflowBas(m, ibound=ibound, strt=strt)
-
-
-# setting up recharge data and recharge package
-recharge_data = 0.250 # recharge flux mm/year (default is 1.e-3)
-nrchop = 1 # optional code (1: to top grid layer only; 2: to layer defined in irch 3: to highest active cell)
-rch = mf.ModflowRch(m, nrchop=nrchop, rech=recharge_data)
-
-# setting up the well package with stress periods
-pumping_rate = -4e+10 # m^3 / year
-lrcq = {0: [[0, 5, 6, 0.]], 1: [[0, 5, 6, -4e+10]]} 
-wel = mf.ModflowWel(m, stress_period_data=lrcq)
-
+# set the aquifer properties with the lpf-package
+lpf = mf.ModflowLpf(ml, hk=k)
+ 
 # instantiation of the solver with default values
-pcg = mf.ModflowPcg(m) # pre-conjugate gradient solver
+pcg = mf.ModflowPcg(ml)
 
 # instantiation of the output control with default values
-oc = mf.ModflowOc(m) # output control
+oc = mf.ModflowOc(ml)
 
-m.write_input()
-m.run_model()
+ml.write_input()
+ml.run_model()
 
 if os.path.exists(workspace):
     shutil.rmtree(workspace)
