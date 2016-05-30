@@ -3,9 +3,7 @@
   This script is part of a study-project by TU-Dresden
   We try to investigate model-complexity with calculation time
   This script compares different river stage value, where one argument will be needed 
-  Base script 'Lake'
-
-"""
+ """
 import os
 import numpy as np
 import flopy.modflow as mf
@@ -23,6 +21,8 @@ if not os.path.exists(workspace):
 
 name = 'performance_test'
 
+print 'Running ' + sys.argv[0] + ' ' + sys.argv[1]
+
 # --- Setting up the parameters
 # Groundwater heads
 h1 = 100  # in the boundaries
@@ -33,7 +33,7 @@ NLay = 10
 
 # Number of columns and rows
 # we are assuming that NCol = NRow
-N = 101
+N = 11
 
 # The length and with of the model
 L = 400.0 
@@ -101,18 +101,17 @@ stage = int(sys.argv[1])
 riv_bot = -5.7
 conductance = 1000
 sp =  [
-		[0, 0, 1, stage, conductance, riv_bot],
+		[0, 1, 0, stage, conductance, riv_bot],
 		[0, 1, 1, stage, conductance, riv_bot],
-		[0, 2, 1, stage, conductance, riv_bot],
-		[0, 3, 1, stage, conductance, riv_bot],
-		[0, 4, 1, stage, conductance, riv_bot],
-		[0, 5, 1, stage, conductance, riv_bot],
-		[0, 6, 1, stage, conductance, riv_bot],
-		[0, 7, 1, stage, conductance, riv_bot],
-		[0, 8, 1, stage, conductance, riv_bot],
-		[0, 9, 1, stage, conductance, riv_bot],
-		[0, 10, 1, stage, conductance, riv_bot],
-		[0, 11, 1, stage, conductance, riv_bot]
+		[0, 1, 2, stage, conductance, riv_bot],
+		[0, 1, 3, stage, conductance, riv_bot],
+		[0, 1, 4, stage, conductance, riv_bot],
+		[0, 1, 5, stage, conductance, riv_bot],
+		[0, 1, 6, stage, conductance, riv_bot],
+		[0, 1, 7, stage, conductance, riv_bot],
+		[0, 1, 8, stage, conductance, riv_bot],
+		[0, 1, 9, stage, conductance, riv_bot],
+		[0, 1, 10, stage, conductance, riv_bot],
        ] 
 riv = mf.ModflowRiv(ml, stress_period_data=sp)
  
