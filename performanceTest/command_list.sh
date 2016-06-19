@@ -43,6 +43,11 @@ python 2_9-GHB.py 0
 python 2_9-GHB.py 1
 python 3_1-Packages.py 1
 python 3_1-Packages.py 2
-python 3_2-Laycon.py 1 
+python 3_2-Laycon.py 0
+python 3_2-Laycon.py 1
 python 3_2-Laycon.py 2
-python 3_2-Laycon.py 3
+python 4_1-Solvers.py 1
+python 4_1-Solvers.py 2
+python 4_1-Solvers.py 3
+python 4_1-Solvers.py 4
+python 4_1-Solvers.py 5
