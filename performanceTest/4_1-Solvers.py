@@ -111,7 +111,7 @@ if solver == 4:
    gmg = mf.ModflowGmg(ml)
 
 if solver == 5:
-   sip = mf.ModflowSip(ml, mxiter=100, hclose=0.0001)
+   sip = mf.ModflowSip(ml, mxiter=100, hclose=0.00000001)
 
 # instantiation of the output control with default values
 oc = mf.ModflowOc(ml)
