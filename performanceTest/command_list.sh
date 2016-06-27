@@ -63,3 +63,8 @@ run 3_1-Packages.py 2
 run 3_2-Laycon.py 1
 run 3_2-Laycon.py 2
 run 3_2-Laycon.py 3
+run 4_1-Solver.py 1
+run 4_1-Solver.py 2
+run 4_1-Solver.py 3
+run 4_1-Solver.py 4
+run 4_1-Solver.py 5
