@@ -1,0 +1,29 @@
+	Thread ID 2936	0	 (i)  Log subsystem started in elapsed time mode.
+	Thread ID 2936	0	 (i)  Logging [debug info (D), info (i), notices (M), warnings (W), errors (Er), fatal errors (!!)]
+	Thread ID 2936	0	 (i)  Buffered mode: False
+	Thread ID 2936	0	 (M)  Service thread started
+	Thread ID 2936	1389	 (i)  Temporary rendering context created
+	Thread ID 2936	1389	 (M)  Getting OpenGL entry points and extension
+	Thread ID 2936	1389	 (M)  
+	Thread ID 2936	1389	 (i)  OpenGL rendering context information:
+	Thread ID 2936	1389	 (i)  Renderer     : GeForce GT 730/PCIe/SSE2
+	Thread ID 2936	1389	 (i)  Vendor       : NVIDIA Corporation
+	Thread ID 2936	1389	 (i)  Version      : 4.4.0
+	Thread ID 2936	1389	 (i)  GLSL version : 4.40 NVIDIA via Cg compiler
+	Thread ID 2936	1389	 (M)  
+	Thread ID 2936	1404	 (M)  Getting OpenGL entry points and extension
+	Thread ID 2936	1435	 (i)  Backward compatible core PBuffer context successfully created
+	Thread ID 2936	1435	 (M)  Service context successfuly initialized
+	Thread ID 6336	4774	 (i)  Temporary rendering context created
+	Thread ID 6336	4774	 (M)  Getting OpenGL entry points and extension
+	Thread ID 6336	4774	 (i)  Temporary rendering context destroyed
+	Thread ID 6336	4774	 (M)  Getting OpenGL entry points and extension
+	Thread ID 6336	4789	 (i)  Temporary rendering context created
+	Thread ID 6336	4789	 (M)  Getting OpenGL entry points and extension
+	Thread ID 6336	4789	 (i)  Temporary rendering context destroyed
+	Thread ID 6336	4789	 (M)  Getting OpenGL entry points and extension
+	Thread ID 6336	31528	 (i)  Service context queue task depleted
+	Thread ID 2936	10107461	 (M)  Service thread finished
+	Thread ID 6336	10107508	 (D)  Service thread destroyed
+	Thread ID 6336	10107742	 (i)  Logged fatal_errors: 0, errors: 0, warnings: 0, notices: 11, info: 15, debug: 1
+	Thread ID 6336	10107757	 (i)  Log session shutdown
