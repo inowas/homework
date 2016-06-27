@@ -9,6 +9,7 @@ import numpy as np
 import flopy.modflow as mf
 import shutil
 import sys
+from datetime import datetime
 
 workspace = os.path.join('ascii')
 
@@ -102,8 +103,13 @@ pcg = mf.ModflowPcg(ml)
 # instantiation of the output control with default values
 oc = mf.ModflowOc(ml)
 
+timeStartWritingInput = datetime.now()
 ml.write_input()
+timeStartRunningModel = datetime.now()
 ml.run_model()
+timeEndRunningModel = datetime.now()
+print "Time writing input: "+str(timeStartRunningModel-timeStartWritingInput)
+print "Calculation Time: "+str(timeEndRunningModel-timeStartRunningModel)
 
 if os.path.exists(workspace):
     shutil.rmtree(workspace)

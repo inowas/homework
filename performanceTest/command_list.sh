@@ -1,5 +1,7 @@
 #! /bin/bash
 
+set e
+
 TEMP_FILE_PROCESS=tmp_process.log
 TEMP_FILE_TOTAL=performance_tests.log
 
@@ -8,12 +10,13 @@ function run {
     do
         d=`date +%Y-%m-%d:%H:%M:%S`
         python $1 $2 $3 > $TEMP_FILE_PROCESS
-        t=$(cat $TEMP_FILE_PROCESS | grep "Elapsed")
+        t1=$(cat $TEMP_FILE_PROCESS | grep "Time writing input:")
+        t2=$(cat $TEMP_FILE_PROCESS | grep "Calculation Time:")
         n=$(cat $TEMP_FILE_PROCESS | grep "Normal")
         rm -rf $TEMP_FILE_PROCESS
         PARAMETERS="$2; $3"
-        echo "$d; $1; $PARAMETERS $p; $t; $n"
-        echo "$d; $1; $PARAMETERS $p; $t; $n" >> $TEMP_FILE_TOTAL
+        echo "$d; $1; $PARAMETERS $p; $t1; $t2; $n"
+        echo "$d; $1; $PARAMETERS $p; $t1; $t2; $n" >> $TEMP_FILE_TOTAL
     done
 }
 
