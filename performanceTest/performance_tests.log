@@ -1,0 +1,325 @@
+2016-06-27:12:25:30; 1_1-GridSize.py; 11;  ;  Elapsed run time:  0.135 Seconds;   Normal termination of simulation
+2016-06-27:12:25:35; 1_1-GridSize.py; 11;  ;  Elapsed run time:  0.088 Seconds;   Normal termination of simulation
+2016-06-27:12:25:37; 1_1-GridSize.py; 11;  ;  Elapsed run time:  0.089 Seconds;   Normal termination of simulation
+2016-06-27:12:25:40; 1_1-GridSize.py; 11;  ;  Elapsed run time:  0.088 Seconds;   Normal termination of simulation
+2016-06-27:12:25:42; 1_1-GridSize.py; 11;  ;  Elapsed run time:  0.089 Seconds;   Normal termination of simulation
+2016-07-07:09:24:59; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.156000; Calculation Time: 0:00:00.764401;   Normal termination of simulation
+2016-07-07:09:25:19; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.031201; Calculation Time: 0:00:00.312000;   Normal termination of simulation
+2016-07-07:09:25:22; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.296401;   Normal termination of simulation
+2016-07-07:09:25:24; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.312000;   Normal termination of simulation
+2016-07-07:09:25:27; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.312001;   Normal termination of simulation
+2016-07-07:09:25:29; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:25:32; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.296400;   Normal termination of simulation
+2016-07-07:09:25:34; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.312001;   Normal termination of simulation
+2016-07-07:09:25:37; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.327601;   Normal termination of simulation
+2016-07-07:09:25:39; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.046801; Calculation Time: 0:00:00.327600;   Normal termination of simulation
+2016-07-07:09:25:42; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.748801; Calculation Time: 0:00:05.101209;   Normal termination of simulation
+2016-07-07:09:25:50; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.748802; Calculation Time: 0:00:05.210409;   Normal termination of simulation
+2016-07-07:09:25:58; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.748801; Calculation Time: 0:00:05.116809;   Normal termination of simulation
+2016-07-07:09:26:06; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.748801; Calculation Time: 0:00:05.116809;   Normal termination of simulation
+2016-07-07:09:26:14; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.764401; Calculation Time: 0:00:05.098610;   Normal termination of simulation
+2016-07-07:09:26:22; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.795601; Calculation Time: 0:00:05.879021;   Normal termination of simulation
+2016-07-07:09:26:31; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.780002; Calculation Time: 0:00:05.132409;   Normal termination of simulation
+2016-07-07:09:26:40; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.758802; Calculation Time: 0:00:05.133479;   Normal termination of simulation
+2016-07-07:09:26:48; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.744042; Calculation Time: 0:00:05.197298;   Normal termination of simulation
+2016-07-07:09:26:56; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.813047; Calculation Time: 0:00:05.418310;   Normal termination of simulation
+2016-07-07:09:27:53; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.033002; Calculation Time: 0:00:00.321803;   Normal termination of simulation
+2016-07-07:09:27:56; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.093600; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:27:58; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.312001;   Normal termination of simulation
+2016-07-07:09:28:01; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.748801; Calculation Time: 0:00:05.148010;   Normal termination of simulation
+2016-07-07:09:28:09; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.748801; Calculation Time: 0:00:05.116809;   Normal termination of simulation
+2016-07-07:09:28:17; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.780002; Calculation Time: 0:00:05.056470;   Normal termination of simulation
+2016-07-07:09:28:26; 1_2-LayerNumbers.py; 10;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.327601;   Normal termination of simulation
+2016-07-07:09:28:28; 1_2-LayerNumbers.py; 10;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.312001;   Normal termination of simulation
+2016-07-07:09:28:31; 1_2-LayerNumbers.py; 10;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.296400;   Normal termination of simulation
+2016-07-07:09:28:33; 1_2-LayerNumbers.py; 100;  ; Time writing input: 0:00:00.171601; Calculation Time: 0:00:00.795601;   Normal termination of simulation
+2016-07-07:09:28:37; 1_2-LayerNumbers.py; 100;  ; Time writing input: 0:00:00.156001; Calculation Time: 0:00:00.873601;   Normal termination of simulation
+2016-07-07:09:28:40; 1_2-LayerNumbers.py; 100;  ; Time writing input: 0:00:00.171601; Calculation Time: 0:00:00.780001;   Normal termination of simulation
+2016-07-07:09:28:43; 1_2-LayerNumbers.py; 1000;  ; Time writing input: 0:00:01.482003; Calculation Time: 0:00:06.848412;   Normal termination of simulation
+2016-07-07:09:28:56; 1_2-LayerNumbers.py; 1000;  ; Time writing input: 0:00:01.419603; Calculation Time: 0:00:06.942012;   Normal termination of simulation
+2016-07-07:09:29:09; 1_2-LayerNumbers.py; 1000;  ; Time writing input: 0:00:01.372802; Calculation Time: 0:00:06.754812;   Normal termination of simulation
+2016-07-07:09:29:21; 1_3-InactActCells.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.343201;   Normal termination of simulation
+2016-07-07:09:29:24; 1_3-InactActCells.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.374400;   Normal termination of simulation
+2016-07-07:09:29:26; 1_3-InactActCells.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.405600;   Normal termination of simulation
+2016-07-07:09:29:29; 1_3-InactActCells.py; 50;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.390001;   Normal termination of simulation
+2016-07-07:09:29:31; 1_3-InactActCells.py; 50;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.343200;   Normal termination of simulation
+2016-07-07:09:29:34; 1_3-InactActCells.py; 50;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.343201;   Normal termination of simulation
+2016-07-07:09:29:37; 1_3-InactActCells.py; 100;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:29:39; 1_3-InactActCells.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.296401;   Normal termination of simulation
+2016-07-07:09:29:42; 1_3-InactActCells.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.296400;   Normal termination of simulation
+2016-07-07:09:29:44; 1_4-HydralicConductivities.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.390001;   Normal termination of simulation
+2016-07-07:09:29:47; 1_4-HydralicConductivities.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.374400;   Normal termination of simulation
+2016-07-07:09:29:49; 1_4-HydralicConductivities.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.343201;   Normal termination of simulation
+2016-07-07:09:29:52; 1_4-HydralicConductivities.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.390001;   Normal termination of simulation
+2016-07-07:09:29:54; 1_4-HydralicConductivities.py; 100;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.358801;   Normal termination of simulation
+2016-07-07:09:29:57; 1_4-HydralicConductivities.py; 100;  ; Time writing input: 0:00:00.062400; Calculation Time: 0:00:00.358801;   Normal termination of simulation
+2016-07-07:09:30:00; 1_4-HydralicConductivities.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.343200;   Normal termination of simulation
+2016-07-07:09:30:02; 1_4-HydralicConductivities.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.405601;   Normal termination of simulation
+2016-07-07:09:30:05; 1_4-HydralicConductivities.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.358800;   Normal termination of simulation
+2016-07-07:09:30:07; 1_5-StorageCapacities.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.358801;   Normal termination of simulation
+2016-07-07:09:30:10; 1_5-StorageCapacities.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.296400;   Normal termination of simulation
+2016-07-07:09:30:12; 1_5-StorageCapacities.py; 0;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.327601;   Normal termination of simulation
+2016-07-07:09:30:15; 1_5-StorageCapacities.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.343200;   Normal termination of simulation
+2016-07-07:09:30:18; 1_5-StorageCapacities.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.327600;   Normal termination of simulation
+2016-07-07:09:30:20; 1_5-StorageCapacities.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.358801;   Normal termination of simulation
+2016-07-07:09:30:23; 1_5-StorageCapacities.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.327600;   Normal termination of simulation
+2016-07-07:09:30:25; 1_5-StorageCapacities.py; 2;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.343619;   Normal termination of simulation
+2016-07-07:09:30:28; 1_5-StorageCapacities.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.358801;   Normal termination of simulation
+2016-07-07:09:30:30; 2_1-StressPeriodsNumber.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.234000;   Normal termination of simulation
+2016-07-07:09:30:33; 2_1-StressPeriodsNumber.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.202800;   Normal termination of simulation
+2016-07-07:09:30:35; 2_1-StressPeriodsNumber.py; 1;  ; Time writing input: 0:00:00.015600; Calculation Time: 0:00:00.218401;   Normal termination of simulation
+2016-07-07:09:30:38; 2_1-StressPeriodsNumber.py; 50;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280801;   Normal termination of simulation
+2016-07-07:09:30:40; 2_1-StressPeriodsNumber.py; 50;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.468001;   Normal termination of simulation
+2016-07-07:09:30:43; 2_1-StressPeriodsNumber.py; 50;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.358801;   Normal termination of simulation
+2016-07-07:09:30:46; 2_1-StressPeriodsNumber.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.343200;   Normal termination of simulation
+2016-07-07:09:30:49; 2_1-StressPeriodsNumber.py; 100;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:30:51; 2_1-StressPeriodsNumber.py; 100;  ; Time writing input: 0:00:00.032002; Calculation Time: 0:00:00.327402;   Normal termination of simulation
+2016-07-07:09:30:53; 2_2-TimeStepsNumber.py; 10;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.686401;   Normal termination of simulation
+2016-07-07:09:30:56; 2_2-TimeStepsNumber.py; 10;  ; Time writing input: 0:00:00.078001; Calculation Time: 0:00:00.708001;   Normal termination of simulation
+2016-07-07:09:30:59; 2_2-TimeStepsNumber.py; 10;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.698803;   Normal termination of simulation
+2016-07-07:09:31:02; 2_2-TimeStepsNumber.py; 100;  ; Time writing input: 0:00:00.109201; Calculation Time: 0:00:05.101208;   Normal termination of simulation
+2016-07-07:09:31:09; 2_2-TimeStepsNumber.py; 100;  ; Time writing input: 0:00:00.109200; Calculation Time: 0:00:05.944611;   Normal termination of simulation
+2016-07-07:09:31:17; 2_2-TimeStepsNumber.py; 100;  ; Time writing input: 0:00:00.109200; Calculation Time: 0:00:06.871413;   Normal termination of simulation
+2016-07-07:09:31:27; 2_2-TimeStepsNumber.py; 1000;  ; Time writing input: 0:00:00.710402; Calculation Time: 0:01:03.728962;   Normal termination of simulation
+2016-07-07:09:32:34; 2_2-TimeStepsNumber.py; 1000;  ; Time writing input: 0:00:00.733201; Calculation Time: 0:00:50.464291;   Normal termination of simulation
+2016-07-07:09:33:27; 2_2-TimeStepsNumber.py; 1000;  ; Time writing input: 0:00:00.717601; Calculation Time: 0:00:48.841893;   Normal termination of simulation
+2016-07-07:09:34:19; 2_3-TimeStepsLength.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.405601;   Normal termination of simulation
+2016-07-07:09:34:22; 2_3-TimeStepsLength.py; 1;  ; Time writing input: 0:00:00.078000; Calculation Time: 0:00:00.327601;   Normal termination of simulation
+2016-07-07:09:34:24; 2_3-TimeStepsLength.py; 1;  ; Time writing input: 0:00:00.062400; Calculation Time: 0:00:00.280801;   Normal termination of simulation
+2016-07-07:09:34:27; 2_3-TimeStepsLength.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.312000;   Normal termination of simulation
+2016-07-07:09:34:30; 2_3-TimeStepsLength.py; 100;  ; Time writing input: 0:00:00.124801; Calculation Time: 0:00:00.312000;   Normal termination of simulation
+2016-07-07:09:34:33; 2_3-TimeStepsLength.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.296401;   Normal termination of simulation
+2016-07-07:09:34:35; 2_3-TimeStepsLength.py; 10000;  ; Time writing input: 0:00:00.078001; Calculation Time: 0:00:00.296400;   Normal termination of simulation
+2016-07-07:09:34:38; 2_3-TimeStepsLength.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.296400;   Normal termination of simulation
+2016-07-07:09:34:40; 2_3-TimeStepsLength.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.343201;   Normal termination of simulation
+2016-07-07:09:34:43; 2_4-RiverStage.py; 0;  ; Time writing input: 0:00:00.124801; Calculation Time: 0:00:00.468000;   Normal termination of simulation
+2016-07-07:09:34:46; 2_4-RiverStage.py; 0;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.358801;   Normal termination of simulation
+2016-07-07:09:34:49; 2_4-RiverStage.py; 0;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.514801;   Normal termination of simulation
+2016-07-07:09:34:52; 2_4-RiverStage.py; 100;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.296400;   Normal termination of simulation
+2016-07-07:09:34:55; 2_4-RiverStage.py; 100;  ; Time writing input: 0:00:00.062400; Calculation Time: 0:00:00.374401;   Normal termination of simulation
+2016-07-07:09:34:58; 2_4-RiverStage.py; 100;  ; Time writing input: 0:00:00.078000; Calculation Time: 0:00:00.343200;   Normal termination of simulation
+2016-07-07:09:35:01; 2_4-RiverStage.py; 1000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.405600;   Normal termination of simulation
+2016-07-07:09:35:04; 2_4-RiverStage.py; 1000;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.592801;   Normal termination of simulation
+2016-07-07:09:35:07; 2_4-RiverStage.py; 1000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.390001;   Normal termination of simulation
+2016-07-07:09:35:10; 2_5-RiverConductance.py; 0;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.358801;   Normal termination of simulation
+2016-07-07:09:35:13; 2_5-RiverConductance.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.327600;   Normal termination of simulation
+2016-07-07:09:35:16; 2_5-RiverConductance.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.358801;   Normal termination of simulation
+2016-07-07:09:35:19; 2_5-RiverConductance.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.343200;   Normal termination of simulation
+2016-07-07:09:35:22; 2_5-RiverConductance.py; 100;  ; Time writing input: 0:00:00.046801; Calculation Time: 0:00:00.468000;   Normal termination of simulation
+2016-07-07:09:35:25; 2_5-RiverConductance.py; 100;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.296400;   Normal termination of simulation
+2016-07-07:09:35:27; 2_5-RiverConductance.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.343200;   Normal termination of simulation
+2016-07-07:09:35:30; 2_5-RiverConductance.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.358801;   Normal termination of simulation
+2016-07-07:09:35:33; 2_5-RiverConductance.py; 10000;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.343201;   Normal termination of simulation
+2016-07-07:09:35:36; 2_6-WellsNumbers.py; 1;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.421201;   Normal termination of simulation
+2016-07-07:09:35:39; 2_6-WellsNumbers.py; 1;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.296401;   Normal termination of simulation
+2016-07-07:09:35:42; 2_6-WellsNumbers.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.358801;   Normal termination of simulation
+2016-07-07:09:35:45; 2_6-WellsNumbers.py; 2;  ; Time writing input: 0:00:00.062400; Calculation Time: 0:00:00.312001;   Normal termination of simulation
+2016-07-07:09:35:48; 2_6-WellsNumbers.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.453401;   Normal termination of simulation
+2016-07-07:09:35:51; 2_6-WellsNumbers.py; 2;  ; Time writing input: 0:00:00.062400; Calculation Time: 0:00:00.312000;   Normal termination of simulation
+2016-07-07:09:35:54; 2_6-WellsNumbers.py; 3;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.374401;   Normal termination of simulation
+2016-07-07:09:35:56; 2_6-WellsNumbers.py; 3;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:35:59; 2_6-WellsNumbers.py; 3;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:36:01; 2_7-PumpingRates.py; 3; -100 ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:36:03; 2_7-PumpingRates.py; 3; -100 ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:36:05; 2_7-PumpingRates.py; 3; -100 ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:36:07; 2_7-PumpingRates.py; 3; -1000 ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:36:10; 2_7-PumpingRates.py; 3; -1000 ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:36:12; 2_7-PumpingRates.py; 3; -1000 ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:36:14; 2_7-PumpingRates.py; 3; -10000 ; Time writing input: 0:00:00.062400; Calculation Time: 0:00:00.296400;   Normal termination of simulation
+2016-07-07:09:36:16; 2_7-PumpingRates.py; 3; -10000 ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:36:19; 2_7-PumpingRates.py; 3; -10000 ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:36:21; 2_8-RechargeData.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:36:23; 2_8-RechargeData.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:36:25; 2_8-RechargeData.py; 0;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.273201;   Normal termination of simulation
+2016-07-07:09:36:28; 2_8-RechargeData.py; 10;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:36:30; 2_8-RechargeData.py; 10;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:36:32; 2_8-RechargeData.py; 10;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:36:34; 2_8-RechargeData.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280801;   Normal termination of simulation
+2016-07-07:09:36:37; 2_8-RechargeData.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:36:39; 2_8-RechargeData.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:36:41; 2_9-GHB.py; 0;  ; Time writing input: 0:00:00.046801; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:36:43; 2_9-GHB.py; 0;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:36:46; 2_9-GHB.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:36:48; 2_9-GHB.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280801;   Normal termination of simulation
+2016-07-07:09:36:50; 2_9-GHB.py; 1;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:36:52; 2_9-GHB.py; 1;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:36:54; 3_1-Packages.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:36:57; 3_1-Packages.py; 1;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.267201;   Normal termination of simulation
+2016-07-07:09:36:59; 3_1-Packages.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:37:01; 3_1-Packages.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:37:03; 3_1-Packages.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:37:06; 3_1-Packages.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.267200;   Normal termination of simulation
+2016-07-07:09:37:08; 3_2-Laycon.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:37:10; 3_2-Laycon.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:37:12; 3_2-Laycon.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.251600;   Normal termination of simulation
+2016-07-07:09:37:14; 3_2-Laycon.py; 2;  ; Time writing input: 0:00:00.033200; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:37:17; 3_2-Laycon.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:37:19; 3_2-Laycon.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:37:21; 3_2-Laycon.py; 3;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.187200; 
+2016-07-07:09:37:23; 3_2-Laycon.py; 3;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.187200; 
+2016-07-07:09:37:25; 3_2-Laycon.py; 3;  ; Time writing input: 0:00:00.015600; Calculation Time: 0:00:00.202801; 
+2016-07-07:09:37:27; 4_1-Solver.py; 1;  ; ; ; 
+2016-07-07:09:37:28; 4_1-Solver.py; 1;  ; ; ; 
+2016-07-07:09:37:28; 4_1-Solver.py; 1;  ; ; ; 
+2016-07-07:09:37:28; 4_1-Solver.py; 2;  ; ; ; 
+2016-07-07:09:37:29; 4_1-Solver.py; 2;  ; ; ; 
+2016-07-07:09:37:29; 4_1-Solver.py; 2;  ; ; ; 
+2016-07-07:09:37:29; 4_1-Solver.py; 3;  ; ; ; 
+2016-07-07:09:37:30; 4_1-Solver.py; 3;  ; ; ; 
+2016-07-07:09:37:30; 4_1-Solver.py; 3;  ; ; ; 
+2016-07-07:09:37:30; 4_1-Solver.py; 4;  ; ; ; 
+2016-07-07:09:37:30; 4_1-Solver.py; 4;  ; ; ; 
+2016-07-07:09:37:31; 4_1-Solver.py; 4;  ; ; ; 
+2016-07-07:09:37:31; 4_1-Solver.py; 5;  ; ; ; 
+2016-07-07:09:37:31; 4_1-Solver.py; 5;  ; ; ; 
+2016-07-07:09:37:32; 4_1-Solver.py; 5;  ; ; ; 
+2016-07-07:09:46:34; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.327601;   Normal termination of simulation
+2016-07-07:09:46:36; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.031201; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:46:39; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:46:41; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.748801; Calculation Time: 0:00:05.116809;   Normal termination of simulation
+2016-07-07:09:46:48; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.717601; Calculation Time: 0:00:04.909409;   Normal termination of simulation
+2016-07-07:09:46:56; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.748801; Calculation Time: 0:00:04.947209;   Normal termination of simulation
+2016-07-07:09:47:04; 1_2-LayerNumbers.py; 10;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:47:06; 1_2-LayerNumbers.py; 10;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:47:08; 1_2-LayerNumbers.py; 10;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:47:10; 1_2-LayerNumbers.py; 100;  ; Time writing input: 0:00:00.140400; Calculation Time: 0:00:00.748801;   Normal termination of simulation
+2016-07-07:09:47:13; 1_2-LayerNumbers.py; 100;  ; Time writing input: 0:00:00.140400; Calculation Time: 0:00:00.748802;   Normal termination of simulation
+2016-07-07:09:47:16; 1_2-LayerNumbers.py; 100;  ; Time writing input: 0:00:00.140401; Calculation Time: 0:00:00.733201;   Normal termination of simulation
+2016-07-07:09:47:19; 1_2-LayerNumbers.py; 1000;  ; Time writing input: 0:00:01.312403; Calculation Time: 0:00:06.475011;   Normal termination of simulation
+2016-07-07:09:47:31; 1_2-LayerNumbers.py; 1000;  ; Time writing input: 0:00:01.310402; Calculation Time: 0:00:06.427211;   Normal termination of simulation
+2016-07-07:09:47:42; 1_2-LayerNumbers.py; 1000;  ; Time writing input: 0:00:01.310402; Calculation Time: 0:00:06.442811;   Normal termination of simulation
+2016-07-07:09:47:53; 1_3-InactActCells.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.296401;   Normal termination of simulation
+2016-07-07:09:47:56; 1_3-InactActCells.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.296401;   Normal termination of simulation
+2016-07-07:09:47:58; 1_3-InactActCells.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.312001;   Normal termination of simulation
+2016-07-07:09:48:00; 1_3-InactActCells.py; 50;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.296401;   Normal termination of simulation
+2016-07-07:09:48:03; 1_3-InactActCells.py; 50;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.312001;   Normal termination of simulation
+2016-07-07:09:48:05; 1_3-InactActCells.py; 50;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:48:07; 1_3-InactActCells.py; 100;  ; Time writing input: 0:00:00.031201; Calculation Time: 0:00:00.234000;   Normal termination of simulation
+2016-07-07:09:48:09; 1_3-InactActCells.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.218401;   Normal termination of simulation
+2016-07-07:09:48:12; 1_3-InactActCells.py; 100;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.218400;   Normal termination of simulation
+2016-07-07:09:48:14; 1_4-HydralicConductivities.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:48:16; 1_4-HydralicConductivities.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.296400;   Normal termination of simulation
+2016-07-07:09:48:18; 1_4-HydralicConductivities.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:48:20; 1_4-HydralicConductivities.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:48:23; 1_4-HydralicConductivities.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:48:25; 1_4-HydralicConductivities.py; 100;  ; Time writing input: 0:00:00.031201; Calculation Time: 0:00:00.296400;   Normal termination of simulation
+2016-07-07:09:48:27; 1_4-HydralicConductivities.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280801;   Normal termination of simulation
+2016-07-07:09:48:29; 1_4-HydralicConductivities.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280801;   Normal termination of simulation
+2016-07-07:09:48:32; 1_4-HydralicConductivities.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.296401;   Normal termination of simulation
+2016-07-07:09:48:34; 1_5-StorageCapacities.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:48:36; 1_5-StorageCapacities.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:48:38; 1_5-StorageCapacities.py; 0;  ; Time writing input: 0:00:00.062400; Calculation Time: 0:00:00.280801;   Normal termination of simulation
+2016-07-07:09:48:41; 1_5-StorageCapacities.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.296401;   Normal termination of simulation
+2016-07-07:09:48:43; 1_5-StorageCapacities.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280801;   Normal termination of simulation
+2016-07-07:09:48:45; 1_5-StorageCapacities.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:48:47; 1_5-StorageCapacities.py; 2;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:48:50; 1_5-StorageCapacities.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:48:52; 1_5-StorageCapacities.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:48:54; 2_1-StressPeriodsNumber.py; 1;  ; Time writing input: 0:00:00.078000; Calculation Time: 0:00:00.171600;   Normal termination of simulation
+2016-07-07:09:48:56; 2_1-StressPeriodsNumber.py; 1;  ; Time writing input: 0:00:00.015600; Calculation Time: 0:00:00.171600;   Normal termination of simulation
+2016-07-07:09:48:58; 2_1-StressPeriodsNumber.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.171600;   Normal termination of simulation
+2016-07-07:09:49:00; 2_1-StressPeriodsNumber.py; 50;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.218401;   Normal termination of simulation
+2016-07-07:09:49:03; 2_1-StressPeriodsNumber.py; 50;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.218401;   Normal termination of simulation
+2016-07-07:09:49:05; 2_1-StressPeriodsNumber.py; 50;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.218400;   Normal termination of simulation
+2016-07-07:09:49:07; 2_1-StressPeriodsNumber.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:49:09; 2_1-StressPeriodsNumber.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:49:11; 2_1-StressPeriodsNumber.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:49:13; 2_2-TimeStepsNumber.py; 10;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.655202;   Normal termination of simulation
+2016-07-07:09:49:16; 2_2-TimeStepsNumber.py; 10;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.655201;   Normal termination of simulation
+2016-07-07:09:49:19; 2_2-TimeStepsNumber.py; 10;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.655202;   Normal termination of simulation
+2016-07-07:09:49:21; 2_2-TimeStepsNumber.py; 100;  ; Time writing input: 0:00:00.109200; Calculation Time: 0:00:04.805615;   Normal termination of simulation
+2016-07-07:09:49:28; 2_2-TimeStepsNumber.py; 100;  ; Time writing input: 0:00:00.140400; Calculation Time: 0:00:04.759009;   Normal termination of simulation
+2016-07-07:09:49:35; 2_2-TimeStepsNumber.py; 100;  ; Time writing input: 0:00:00.093600; Calculation Time: 0:00:04.680009;   Normal termination of simulation
+2016-07-07:09:49:42; 2_2-TimeStepsNumber.py; 1000;  ; Time writing input: 0:00:00.670801; Calculation Time: 0:00:45.068285;   Normal termination of simulation
+2016-07-07:09:50:29; 2_2-TimeStepsNumber.py; 1000;  ; Time writing input: 0:00:00.717601; Calculation Time: 0:00:44.640080;   Normal termination of simulation
+2016-07-07:09:51:17; 2_2-TimeStepsNumber.py; 1000;  ; Time writing input: 0:00:00.733201; Calculation Time: 0:00:44.419279;   Normal termination of simulation
+2016-07-07:09:52:05; 2_3-TimeStepsLength.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:52:07; 2_3-TimeStepsLength.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:52:09; 2_3-TimeStepsLength.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:52:11; 2_3-TimeStepsLength.py; 100;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:52:13; 2_3-TimeStepsLength.py; 100;  ; Time writing input: 0:00:00.062400; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:52:15; 2_3-TimeStepsLength.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:52:18; 2_3-TimeStepsLength.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.251600;   Normal termination of simulation
+2016-07-07:09:52:20; 2_3-TimeStepsLength.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.234000;   Normal termination of simulation
+2016-07-07:09:52:22; 2_3-TimeStepsLength.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:52:24; 2_4-RiverStage.py; 0;  ; Time writing input: 0:00:00.109201; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:52:27; 2_4-RiverStage.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280801;   Normal termination of simulation
+2016-07-07:09:52:29; 2_4-RiverStage.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:52:31; 2_4-RiverStage.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:52:33; 2_4-RiverStage.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:52:35; 2_4-RiverStage.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:52:37; 2_4-RiverStage.py; 1000;  ; Time writing input: 0:00:00.031201; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:52:40; 2_4-RiverStage.py; 1000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280801;   Normal termination of simulation
+2016-07-07:09:52:42; 2_4-RiverStage.py; 1000;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:52:44; 2_5-RiverConductance.py; 0;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:52:46; 2_5-RiverConductance.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:52:49; 2_5-RiverConductance.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:52:51; 2_5-RiverConductance.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:52:53; 2_5-RiverConductance.py; 100;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:52:55; 2_5-RiverConductance.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.267201;   Normal termination of simulation
+2016-07-07:09:52:57; 2_5-RiverConductance.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:53:00; 2_5-RiverConductance.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:53:02; 2_5-RiverConductance.py; 10000;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.312000;   Normal termination of simulation
+2016-07-07:09:53:04; 2_6-WellsNumbers.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:53:07; 2_6-WellsNumbers.py; 1;  ; Time writing input: 0:00:00.046801; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:53:09; 2_6-WellsNumbers.py; 1;  ; Time writing input: 0:00:00.046801; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:53:11; 2_6-WellsNumbers.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:53:13; 2_6-WellsNumbers.py; 2;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:53:16; 2_6-WellsNumbers.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:53:18; 2_6-WellsNumbers.py; 3;  ; Time writing input: 0:00:00.062400; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:53:20; 2_6-WellsNumbers.py; 3;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:53:23; 2_6-WellsNumbers.py; 3;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.280801;   Normal termination of simulation
+2016-07-07:09:53:25; 2_7-PumpingRates.py; 3; -100 ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:53:27; 2_7-PumpingRates.py; 3; -100 ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:53:29; 2_7-PumpingRates.py; 3; -100 ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:53:31; 2_7-PumpingRates.py; 3; -1000 ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:53:34; 2_7-PumpingRates.py; 3; -1000 ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:53:36; 2_7-PumpingRates.py; 3; -1000 ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:53:38; 2_7-PumpingRates.py; 3; -10000 ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:53:40; 2_7-PumpingRates.py; 3; -10000 ; Time writing input: 0:00:00.046801; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:53:42; 2_7-PumpingRates.py; 3; -10000 ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:53:45; 2_8-RechargeData.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:53:47; 2_8-RechargeData.py; 0;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:53:49; 2_8-RechargeData.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.296400;   Normal termination of simulation
+2016-07-07:09:53:52; 2_8-RechargeData.py; 10;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:53:54; 2_8-RechargeData.py; 10;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:53:56; 2_8-RechargeData.py; 10;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:53:58; 2_8-RechargeData.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:54:01; 2_8-RechargeData.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:54:03; 2_8-RechargeData.py; 100;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265200;   Normal termination of simulation
+2016-07-07:09:54:05; 2_9-GHB.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:54:07; 2_9-GHB.py; 0;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.251600;   Normal termination of simulation
+2016-07-07:09:54:10; 2_9-GHB.py; 0;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:54:12; 2_9-GHB.py; 1;  ; Time writing input: 0:00:00.046801; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:54:14; 2_9-GHB.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:54:16; 2_9-GHB.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280801;   Normal termination of simulation
+2016-07-07:09:54:18; 3_1-Packages.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:54:21; 3_1-Packages.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280801;   Normal termination of simulation
+2016-07-07:09:54:23; 3_1-Packages.py; 1;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:54:25; 3_1-Packages.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:54:28; 3_1-Packages.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.249600;   Normal termination of simulation
+2016-07-07:09:54:30; 3_1-Packages.py; 2;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.249601;   Normal termination of simulation
+2016-07-07:09:54:32; 3_2-Laycon.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280800;   Normal termination of simulation
+2016-07-07:09:54:35; 3_2-Laycon.py; 1;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:54:37; 3_2-Laycon.py; 1;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.483601;   Normal termination of simulation
+2016-07-07:09:54:41; 3_2-Laycon.py; 2;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.280801;   Normal termination of simulation
+2016-07-07:09:54:43; 3_2-Laycon.py; 2;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.296401;   Normal termination of simulation
+2016-07-07:09:54:45; 3_2-Laycon.py; 2;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.265201;   Normal termination of simulation
+2016-07-07:09:54:48; 3_2-Laycon.py; 3;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.187201; 
+2016-07-07:09:54:50; 3_2-Laycon.py; 3;  ; Time writing input: 0:00:00.031200; Calculation Time: 0:00:00.189200; 
+2016-07-07:09:54:53; 3_2-Laycon.py; 3;  ; Time writing input: 0:00:00.046800; Calculation Time: 0:00:00.202800; 
+2016-07-07:09:54:55; 4_1-Solver.py; 1;  ; ; ; 
+2016-07-07:09:54:55; 4_1-Solver.py; 1;  ; ; ; 
+2016-07-07:09:54:56; 4_1-Solver.py; 1;  ; ; ; 
+2016-07-07:09:54:56; 4_1-Solver.py; 2;  ; ; ; 
+2016-07-07:09:54:57; 4_1-Solver.py; 2;  ; ; ; 
+2016-07-07:09:54:57; 4_1-Solver.py; 2;  ; ; ; 
+2016-07-07:09:54:58; 4_1-Solver.py; 3;  ; ; ; 
+2016-07-07:09:54:58; 4_1-Solver.py; 3;  ; ; ; 
+2016-07-07:09:54:59; 4_1-Solver.py; 3;  ; ; ; 
+2016-07-07:09:55:00; 4_1-Solver.py; 4;  ; ; ; 
+2016-07-07:09:55:00; 4_1-Solver.py; 4;  ; ; ; 
+2016-07-07:09:55:01; 4_1-Solver.py; 4;  ; ; ; 
+2016-07-07:09:55:01; 4_1-Solver.py; 5;  ; ; ; 
+2016-07-07:09:55:01; 4_1-Solver.py; 5;  ; ; ; 
+2016-07-07:09:55:02; 4_1-Solver.py; 5;  ; ; ; 

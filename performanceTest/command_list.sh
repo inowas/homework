@@ -1,13 +1,12 @@
 #! /bin/bash
 
-set e
-
 TEMP_FILE_PROCESS=tmp_process.log
 TEMP_FILE_TOTAL=performance_tests.log
 
 function run {
-    for i in {1..10}
+    for i in {1..3}
     do
+
         d=`date +%Y-%m-%d:%H:%M:%S`
         python $1 $2 $3 > $TEMP_FILE_PROCESS
         t1=$(cat $TEMP_FILE_PROCESS | grep "Time writing input:")
@@ -22,7 +21,7 @@ function run {
 
 run 1_1-GridSize.py 11
 run 1_1-GridSize.py 101
-run 1_1-GridSize.py 1001
+#run 1_1-GridSize.py 1001
 run 1_2-LayerNumbers.py 10
 run 1_2-LayerNumbers.py 100
 run 1_2-LayerNumbers.py 1000
