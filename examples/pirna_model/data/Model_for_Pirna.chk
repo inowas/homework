@@ -1,6 +1,4 @@
 type,package,k,i,j,value,desc
-Warning,RCH,0,0,0,0.000000,Mean R/T ratio < checker warning threshold of 2e-08
-Warning,RCH,0,0,0,0.000000,Mean R/T ratio < checker warning threshold of 2e-08
 Error,DIS,4,0,67,0.731003,thin cells (less than checker threshold of 1.0)
 Error,DIS,4,0,68,0.736595,thin cells (less than checker threshold of 1.0)
 Error,DIS,4,0,69,0.742096,thin cells (less than checker threshold of 1.0)
@@ -2967,3 +2965,5 @@ Error,DIS,4,88,3,0.958206,thin cells (less than checker threshold of 1.0)
 Error,DIS,4,88,4,0.987801,thin cells (less than checker threshold of 1.0)
 Error,DIS,4,89,0,0.919998,thin cells (less than checker threshold of 1.0)
 Error,DIS,4,89,1,0.919998,thin cells (less than checker threshold of 1.0)
+Warning,RCH,0,0,0,0.000000,Mean R/T ratio < checker warning threshold of 2e-08
+Warning,RCH,0,0,0,0.000000,Mean R/T ratio < checker warning threshold of 2e-08

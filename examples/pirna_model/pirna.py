@@ -28,7 +28,7 @@ for x in range(0, len(kstpkper)):
     days.append((times[x]/86400)+4901)
     resultsG21L2.append(data[1][10][69])
 
-#  plt.plot_date(days, resultsG21L2)
-#  plt.ylabel('heads')
-#  plt.legend(['Layer 2'], loc='upper right')
-#  plt.show()
+plt.plot_date(days, resultsG21L2)
+plt.ylabel('heads')
+plt.legend(['Layer 2'], loc='upper right')
+plt.show()
