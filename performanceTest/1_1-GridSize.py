@@ -1,7 +1,8 @@
 """
  This script is part of a study-project by TU-Dresden
  We try to investigate model-complexity with calculation time
- 
+ This script compares different numbers of lyers, where one Argument will be needed
+
 """
 import os
 import numpy as np
@@ -9,7 +10,6 @@ import flopy.modflow as mf
 import shutil
 import sys
 from datetime import datetime
-
 
 workspace = os.path.join('ascii')
 
@@ -78,6 +78,7 @@ iBound[:, :, 0] = -1
 
 # Set every last element of every column to -1
 iBound[:, :, -1] = -1
+
 
 # set center cell in upper layer to constant head (-1)
 iBound[0, NHalf, NHalf] = -1

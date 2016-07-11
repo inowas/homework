@@ -323,3 +323,12 @@
 2016-07-07:09:55:01; 4_1-Solver.py; 5;  ; ; ; 
 2016-07-07:09:55:01; 4_1-Solver.py; 5;  ; ; ; 
 2016-07-07:09:55:02; 4_1-Solver.py; 5;  ; ; ; 
+2016-07-11:13:07:43; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.095005; Calculation Time: 0:00:03.237185;   Normal termination of simulation
+2016-07-11:13:08:30; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.039002; Calculation Time: 0:00:00.276016;   Normal termination of simulation
+2016-07-11:13:08:32; 1_1-GridSize.py; 11;  ; Time writing input: 0:00:00.039003; Calculation Time: 0:00:00.282016;   Normal termination of simulation
+2016-07-11:13:08:35; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.786045; Calculation Time: 0:00:05.958340;   Normal termination of simulation
+2016-07-11:13:08:44; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.806046; Calculation Time: 0:00:06.002344;   Normal termination of simulation
+2016-07-11:13:08:53; 1_1-GridSize.py; 101;  ; Time writing input: 0:00:00.844048; Calculation Time: 0:00:05.326305;   Normal termination of simulation
+2016-07-11:13:09:02; 1_2-LayerNumbers.py; 10;  ; Time writing input: 0:00:00.054003; Calculation Time: 0:00:00.288016;   Normal termination of simulation
+2016-07-11:13:09:04; 1_2-LayerNumbers.py; 10;  ; Time writing input: 0:00:00.036002; Calculation Time: 0:00:00.281016;   Normal termination of simulation
+2016-07-11:13:09:07; 1_2-LayerNumbers.py; 10;  ; Time writing input: 0:00:00.035002; Calculation Time: 0:00:00.274016;   Normal termination of simulation
