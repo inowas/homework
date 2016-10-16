@@ -13,7 +13,9 @@ RUN apt-get -y update && apt-get install -y \
     python-pip \
     unzip \ 
     sed \
-    wget
+    wget \
+    python-tk \
+    python-matplotlib
 WORKDIR /tmp
 RUN wget http://water.usgs.gov/ogw/modflow/MODFLOW-2005_v1.11.00/mf2005v1_11_00_unix.zip
 RUN unzip mf2005v1_11_00_unix.zip
@@ -27,6 +29,5 @@ RUN make
 RUN cp mf2005 /bin/
 WORKDIR /tmp
 RUN rm -rf Unix
-RUN pip install matplotlib 
 RUN pip install flopy 
 WORKDIR /data
