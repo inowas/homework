@@ -1,6 +1,8 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+
+
 import flopy.modflow as mf
 import flopy.utils as fu
 import pprint
@@ -187,6 +189,7 @@ ibound[:,:,-1] = -1
 #        [-1., -1., -1., ..., -1., -1., -1.]]])
 
 # set center cell in upper layer to constant head (-1)
+Nhalf=int(Nhalf)
 ibound[0,Nhalf,Nhalf] = -1 
 
 # defining the start-values
